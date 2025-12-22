@@ -17,6 +17,9 @@ const HeroSection = () => {
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 gradient-overlay" />
+      
+      {/* Section Fade */}
+      <div className="section-fade-bottom" />
 
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">

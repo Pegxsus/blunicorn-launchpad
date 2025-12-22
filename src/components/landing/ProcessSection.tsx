@@ -24,11 +24,15 @@ const ProcessSection = () => {
 
   return (
     <section id="process" className="py-32 relative overflow-hidden">
+      {/* Section Fades */}
+      <div className="section-fade-top" />
+      <div className="section-fade-bottom" />
+      
       {/* Animated Gradient Orb */}
       <div className="gradient-orb gradient-orb-3" style={{ bottom: '10%', right: '10%' }} />
 
       {/* Grid Background */}
-      <div className="absolute inset-0 grid-background opacity-50" />
+      <div className="absolute inset-0 grid-background opacity-30" />
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 gradient-overlay" />

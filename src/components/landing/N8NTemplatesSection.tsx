@@ -25,11 +25,15 @@ const N8NTemplatesSection = () => {
 
   return (
     <section className="py-32 relative overflow-hidden">
+      {/* Section Fades */}
+      <div className="section-fade-top" />
+      <div className="section-fade-bottom" />
+      
       {/* Animated Gradient Orbs */}
       <div className="gradient-orb gradient-orb-2" />
       
       {/* Grid Background */}
-      <div className="absolute inset-0 grid-background opacity-30" />
+      <div className="absolute inset-0 grid-background opacity-20" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div 
