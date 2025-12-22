@@ -1,4 +1,5 @@
 import { Bot, Settings, Rocket } from "lucide-react";
+import useScrollReveal from "@/hooks/useScrollReveal";
 
 const steps = [
   {
@@ -19,17 +20,22 @@ const steps = [
 ];
 
 const ProcessSection = () => {
+  const { ref, isRevealed } = useScrollReveal(0.1);
+
   return (
     <section id="process" className="py-32 relative overflow-hidden">
+      {/* Animated Gradient Orb */}
+      <div className="gradient-orb gradient-orb-3" style={{ bottom: '10%', right: '10%' }} />
+
       {/* Grid Background */}
       <div className="absolute inset-0 grid-background opacity-50" />
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 gradient-overlay" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10" ref={ref}>
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-20">
+        <div className={`text-center max-w-2xl mx-auto mb-20 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
           <div className="flex justify-center mb-8">
             <div className="pill-badge">
               The Process
@@ -38,7 +44,7 @@ const ProcessSection = () => {
           <h2 className="text-4xl md:text-5xl font-semibold mb-6 tracking-tight">
             Three Steps to Smarter
             <br />
-            Automation
+            <span className="gradient-text">Automation</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Turn your business processes into a seamless experience in just
@@ -51,15 +57,15 @@ const ProcessSection = () => {
           {steps.map((step, index) => (
             <div 
               key={step.title} 
-              className="relative p-8"
+              className={`relative p-8 scroll-reveal delay-${(index + 1) * 100} ${isRevealed ? 'revealed' : ''}`}
             >
               {/* Vertical divider */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute right-0 top-8 bottom-8 w-px bg-border" />
+                <div className="hidden md:block absolute right-0 top-8 bottom-8 w-px bg-gradient-to-b from-transparent via-border to-transparent" />
               )}
 
               {/* Icon */}
-              <div className="w-12 h-12 rounded-xl border border-border bg-card flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-xl border border-border bg-card flex items-center justify-center mb-6 hover:scale-110 hover:border-primary/50 transition-all duration-300">
                 <step.icon className="w-5 h-5 text-muted-foreground" />
               </div>
 
