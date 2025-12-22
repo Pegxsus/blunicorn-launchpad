@@ -21,7 +21,7 @@ const Navbar = () => {
             <img 
               src={logo} 
               alt="Blunicorn" 
-              className="h-10 w-auto transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" 
+              className="h-10 w-auto rounded-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" 
             />
             <span className="text-lg font-semibold transition-colors duration-300 group-hover:text-primary">Blunicorn</span>
           </a>
