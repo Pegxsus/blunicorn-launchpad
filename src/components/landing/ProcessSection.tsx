@@ -57,21 +57,21 @@ const ProcessSection = () => {
           {steps.map((step, index) => (
             <div 
               key={step.title} 
-              className={`relative p-8 scroll-reveal delay-${(index + 1) * 100} ${isRevealed ? 'revealed' : ''}`}
+              className={`group relative p-8 scroll-reveal delay-${(index + 1) * 100} ${isRevealed ? 'revealed' : ''} rounded-2xl transition-all duration-300 hover:bg-card/30 cursor-pointer`}
             >
               {/* Vertical divider */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute right-0 top-8 bottom-8 w-px bg-gradient-to-b from-transparent via-border to-transparent" />
+                <div className="hidden md:block absolute right-0 top-8 bottom-8 w-px bg-gradient-to-b from-transparent via-border to-transparent group-hover:via-primary/50 transition-colors duration-300" />
               )}
 
               {/* Icon */}
-              <div className="w-12 h-12 rounded-xl border border-border bg-card flex items-center justify-center mb-6 hover:scale-110 hover:border-primary/50 transition-all duration-300">
-                <step.icon className="w-5 h-5 text-muted-foreground" />
+              <div className="w-12 h-12 rounded-xl border border-border bg-card flex items-center justify-center mb-6 group-hover:scale-110 group-hover:border-primary/50 group-hover:rotate-6 group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
+                <step.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
               </div>
 
               {/* Content */}
-              <h3 className="text-lg font-semibold mb-3">{step.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{step.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
                 {step.description}
               </p>
             </div>

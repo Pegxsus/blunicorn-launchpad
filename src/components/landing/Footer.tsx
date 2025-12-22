@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,10 +12,13 @@ const Footer = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-start gap-8 mb-12">
           {/* Brand */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">B</span>
-            </div>
+          <a href="#" className="flex items-center gap-3 group">
+            <img 
+              src={logo} 
+              alt="Blunicorn" 
+              className="h-10 w-auto transition-transform duration-300 group-hover:scale-110" 
+            />
+            <span className="text-lg font-semibold transition-colors duration-300 group-hover:text-primary">Blunicorn</span>
           </a>
           
           <p className="text-muted-foreground text-sm max-w-xs">
@@ -22,7 +26,7 @@ const Footer = () => {
           </p>
 
           {/* Heart Icon */}
-          <Heart className="w-4 h-4 text-primary" fill="currentColor" />
+          <Heart className="w-4 h-4 text-primary transition-transform duration-300 hover:scale-125 hover:animate-pulse cursor-pointer" fill="currentColor" />
         </div>
 
         {/* Bottom Bar */}
