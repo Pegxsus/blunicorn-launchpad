@@ -86,6 +86,42 @@
   .gradient-overlay {
     background: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--primary) / 0.15), transparent);
   }
+
+  /* Animated gradient orb */
+  .gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: orb-float 8s ease-in-out infinite;
+  }
+
+  .gradient-orb-1 {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, hsl(var(--gradient-purple)), hsl(var(--gradient-blue)));
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .gradient-orb-2 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, hsl(var(--gradient-blue)), hsl(var(--gradient-pink)));
+    top: 50%;
+    right: 10%;
+    animation-delay: -3s;
+  }
+
+  .gradient-orb-3 {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, hsl(var(--gradient-pink)), hsl(var(--gradient-purple)));
+    bottom: 20%;
+    left: 30%;
+    animation-delay: -5s;
+  }
 }
 
 @layer utilities {
@@ -105,6 +141,62 @@
     background-size: 200% 200%;
     animation: gradient-shift 8s ease infinite;
   }
+
+  /* Scroll reveal animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal-left.revealed {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-reveal-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-reveal-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal-scale.revealed {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Stagger delays */
+  .delay-100 { transition-delay: 100ms; }
+  .delay-200 { transition-delay: 200ms; }
+  .delay-300 { transition-delay: 300ms; }
+  .delay-400 { transition-delay: 400ms; }
+  .delay-500 { transition-delay: 500ms; }
 }
 
 @keyframes float {
@@ -137,4 +229,24 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+@keyframes orb-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -20px) scale(1.05);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+  75% {
+    transform: translate(-30px, -10px) scale(1.02);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
