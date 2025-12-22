@@ -1,49 +1,44 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail } from "lucide-react";
+import { Input } from "@/components/ui/input";
 
 const CTASection = () => {
+  const [email, setEmail] = useState("");
+
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gradient-purple/20 rounded-full blur-[150px] animate-pulse-glow" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-gradient-blue/20 rounded-full blur-[120px] animate-float" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-pink/10 rounded-full blur-[180px]" />
-      </div>
-
+    <section id="contact" className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          {/* CTA Card */}
-          <div className="gradient-border rounded-3xl p-12 md:p-16 text-center">
-            {/* Icon */}
-            <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-gradient-purple via-gradient-blue to-gradient-pink flex items-center justify-center mb-8 shadow-2xl shadow-primary/40">
-              <Mail className="w-10 h-10 text-primary-foreground" />
+        {/* Newsletter Card */}
+        <div className="max-w-5xl mx-auto rounded-2xl border border-border bg-card/80 backdrop-blur-sm p-8 md:p-12">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            {/* Left Content */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-semibold mb-2">
+                Join our newsletter
+              </h2>
+              <p className="text-muted-foreground">
+                Stay updated with the latest innovations from Blunicorn
+              </p>
             </div>
 
-            {/* Content */}
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to <span className="gradient-text">Automate</span> Your Future?
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-              Let's discuss how AI automation can transform your business. 
-              Book a free consultation with our experts today.
-            </p>
-
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button variant="gradient" size="xl" className="group">
-                Book Free Consultation
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="xl">
-                hello@blunicorn.ai
-              </Button>
+            {/* Right Form */}
+            <div className="w-full md:w-auto">
+              <div className="flex gap-3 mb-2">
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="min-w-[240px] bg-background border-border"
+                />
+                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                  Subscribe
+                </Button>
+              </div>
+              <p className="text-xs text-muted-foreground">
+                By subscribing you agree with our Privacy Policy
+              </p>
             </div>
-
-            {/* Trust Badge */}
-            <p className="text-sm text-muted-foreground mt-8">
-              ✓ No commitment required · ✓ Free AI audit · ✓ Response within 24 hours
-            </p>
           </div>
         </div>
       </div>
