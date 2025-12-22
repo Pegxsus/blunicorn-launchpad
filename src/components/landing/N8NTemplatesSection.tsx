@@ -59,13 +59,13 @@ const N8NTemplatesSection = () => {
             {templates.map((template, index) => (
               <div 
                 key={template.title}
-                className={`scroll-reveal delay-${(index + 1) * 100} ${isRevealed ? 'revealed' : ''} group p-6 rounded-2xl border border-border bg-card/60 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5`}
+                className={`scroll-reveal delay-${(index + 1) * 100} ${isRevealed ? 'revealed' : ''} group p-6 rounded-2xl border border-border bg-card/60 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2 cursor-pointer`}
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[hsl(var(--gradient-purple)/0.2)] to-[hsl(var(--gradient-blue)/0.2)] border border-border flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <template.icon className="w-5 h-5 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[hsl(var(--gradient-purple)/0.2)] to-[hsl(var(--gradient-blue)/0.2)] border border-border flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-lg group-hover:shadow-primary/30 transition-all duration-300">
+                  <template.icon className="w-5 h-5 text-primary group-hover:animate-pulse" />
                 </div>
-                <h3 className="text-base font-semibold mb-2">{template.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <h3 className="text-base font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{template.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
                   {template.description}
                 </p>
               </div>

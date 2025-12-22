@@ -72,16 +72,16 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={service.title} 
-              className={`group scroll-reveal delay-${(index % 3 + 1) * 100} ${isRevealed ? 'revealed' : ''}`}
+              className={`group scroll-reveal delay-${(index % 3 + 1) * 100} ${isRevealed ? 'revealed' : ''} p-6 rounded-2xl transition-all duration-300 hover:bg-card/50 hover:shadow-lg hover:shadow-primary/5 cursor-pointer`}
             >
               {/* Icon */}
-              <div className="w-10 h-10 rounded-lg border border-border bg-card flex items-center justify-center mb-5 group-hover:border-primary/50 group-hover:scale-110 transition-all duration-300">
-                <service.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              <div className="w-10 h-10 rounded-lg border border-border bg-card flex items-center justify-center mb-5 group-hover:border-primary/50 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
+                <service.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
               </div>
 
               {/* Content */}
-              <h3 className="text-base font-semibold mb-2">{service.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <h3 className="text-base font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
                 {service.description}
               </p>
             </div>

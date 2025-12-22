@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,11 +17,13 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">B</span>
-            </div>
-            <span className="text-lg font-semibold">Blunicorn</span>
+          <a href="#" className="flex items-center gap-3 group">
+            <img 
+              src={logo} 
+              alt="Blunicorn" 
+              className="h-10 w-auto transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" 
+            />
+            <span className="text-lg font-semibold transition-colors duration-300 group-hover:text-primary">Blunicorn</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -29,7 +32,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
+                className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.name}
               </a>
@@ -38,10 +41,10 @@ const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300">
               Login
             </a>
-            <Button variant="default" size="sm" className="rounded-full px-5">
+            <Button variant="default" size="sm" className="rounded-full px-5 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
               Book a Demo
             </Button>
           </div>
