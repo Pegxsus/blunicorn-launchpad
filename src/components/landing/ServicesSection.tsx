@@ -38,12 +38,16 @@ const ServicesSection = () => {
   const { ref, isRevealed } = useScrollReveal(0.1);
 
   return (
-    <section id="services" className="py-32 relative">
+    <section id="services" className="py-32 relative overflow-hidden">
+      {/* Section Fades */}
+      <div className="section-fade-top" />
+      <div className="section-fade-bottom" />
+      
       {/* Animated Gradient Orb */}
       <div className="gradient-orb gradient-orb-1" style={{ top: '20%', left: '60%' }} />
 
       {/* Grid Background */}
-      <div className="absolute inset-0 grid-background opacity-50" />
+      <div className="absolute inset-0 grid-background opacity-30" />
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 gradient-overlay" />

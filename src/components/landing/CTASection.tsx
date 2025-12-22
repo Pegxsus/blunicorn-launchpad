@@ -9,6 +9,9 @@ const CTASection = () => {
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
+      {/* Section Fade */}
+      <div className="section-fade-top" />
+      
       <div className="container mx-auto px-6 relative z-10">
         {/* Newsletter Card */}
         <div 
