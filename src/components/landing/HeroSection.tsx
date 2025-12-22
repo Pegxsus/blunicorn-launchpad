@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import useScrollReveal from "@/hooks/useScrollReveal";
+import n8nLogo from "@/assets/n8n-logo.png";
 const HeroSection = () => {
   const {
     ref,
@@ -28,7 +29,7 @@ const HeroSection = () => {
           <div className="flex justify-center mb-10">
             <div className="pill-badge animate-gradient bg-gradient-to-r from-[hsl(var(--gradient-purple)/0.3)] via-[hsl(var(--gradient-blue)/0.3)] to-[hsl(var(--gradient-pink)/0.3)] bg-[length:200%_200%] border-primary/20">
               <span>Powered by</span>
-              <span className="text-foreground font-medium">AI Innovation</span>
+              <img src={n8nLogo} alt="n8n" className="h-5 w-5 rounded" />
             </div>
           </div>
 
