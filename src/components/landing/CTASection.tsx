@@ -8,7 +8,7 @@ const CTASection = () => {
   const { ref, isRevealed } = useScrollReveal(0.1);
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
+    <section id="contact" className="py-20 relative overflow-hidden bg-background z-10">
       {/* Section Fade */}
       <div className="section-fade-top" />
       
