@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  
   const navLinks = [{
     name: "Features",
     href: "#services"
@@ -17,6 +20,19 @@ const Navbar = () => {
     href: "/contact",
     isPage: true
   }];
+
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/" + href);
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -34,7 +50,7 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ) : (
-                <a key={link.name} href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+                <a key={link.name} href={link.href} onClick={(e) => handleAnchorClick(e, link.href)} className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
                   {link.name}
                 </a>
               )
@@ -68,7 +84,7 @@ const Navbar = () => {
                     {link.name}
                   </Link>
                 ) : (
-                  <a key={link.name} href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300" onClick={() => setIsOpen(false)}>
+                  <a key={link.name} href={link.href} onClick={(e) => { handleAnchorClick(e, link.href); setIsOpen(false); }} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
                     {link.name}
                   </a>
                 )
