@@ -35,7 +35,7 @@ const N8NTemplatesSection = () => {
           {/* Section Header */}
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="flex justify-center mb-8">
-              <div className="pill-badge animate-gradient bg-gradient-to-r from-[hsl(var(--gradient-purple))] via-[hsl(var(--gradient-blue))] to-[hsl(var(--gradient-pink))] bg-[length:200%_200%]">
+              <div className="pill-badge animate-gradient bg-gradient-to-r from-[hsl(var(--gradient-purple)/0.3)] via-[hsl(var(--gradient-blue)/0.3)] to-[hsl(var(--gradient-pink)/0.3)] bg-[length:200%_200%] backdrop-blur-sm border border-border/30">
                 <span className="text-foreground font-medium">Free Templates</span>
               </div>
             </div>
