@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import n8nLogo from "@/assets/n8n-logo.png";
+import BookCallDialog from "./BookCallDialog";
+
 const HeroSection = () => {
+  const [isBookCallOpen, setIsBookCallOpen] = useState(false);
   const {
     ref,
     isRevealed
@@ -48,13 +52,17 @@ const HeroSection = () => {
               <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
               Start automating your business now!
             </span>
-            <a href="https://cal.com/hellopaul/discovery-call-with-paul" target="_blank" rel="noopener noreferrer">
-              <Button variant="default" className="rounded-full px-6 group">
-                Book a Call
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </a>
+            <Button 
+              variant="default" 
+              className="rounded-full px-6 group"
+              onClick={() => setIsBookCallOpen(true)}
+            >
+              Book a Call
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
+
+          <BookCallDialog open={isBookCallOpen} onOpenChange={setIsBookCallOpen} />
         </div>
       </div>
     </section>;

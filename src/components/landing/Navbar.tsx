@@ -3,9 +3,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
+import BookCallDialog from "./BookCallDialog";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isBookCallOpen, setIsBookCallOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   
@@ -62,12 +64,17 @@ const Navbar = () => {
             <Link to="/auth" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300">
               Login
             </Link>
-            <a href="https://cal.com/hellopaul/discovery-call-with-paul" target="_blank" rel="noopener noreferrer">
-              <Button variant="default" size="sm" className="rounded-full px-5 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
-                Book a Call
-              </Button>
-            </a>
+            <Button 
+              variant="default" 
+              size="sm" 
+              className="rounded-full px-5 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
+              onClick={() => setIsBookCallOpen(true)}
+            >
+              Book a Call
+            </Button>
           </div>
+
+          <BookCallDialog open={isBookCallOpen} onOpenChange={setIsBookCallOpen} />
 
           {/* Mobile Menu Toggle */}
           <button className="md:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
@@ -93,11 +100,14 @@ const Navbar = () => {
                 <Link to="/auth" className="text-sm text-muted-foreground" onClick={() => setIsOpen(false)}>
                   Login
                 </Link>
-                <a href="https://cal.com/hellopaul/discovery-call-with-paul" target="_blank" rel="noopener noreferrer">
-                  <Button variant="default" size="sm" className="rounded-full">
-                    Book a Call
-                  </Button>
-                </a>
+                <Button 
+                  variant="default" 
+                  size="sm" 
+                  className="rounded-full"
+                  onClick={() => { setIsBookCallOpen(true); setIsOpen(false); }}
+                >
+                  Book a Call
+                </Button>
               </div>
             </div>
           </div>}
