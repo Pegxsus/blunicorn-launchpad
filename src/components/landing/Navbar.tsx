@@ -37,9 +37,11 @@ const Navbar = () => {
             <Link to="/auth" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300">
               Login
             </Link>
-            <Button variant="default" size="sm" className="rounded-full px-5 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
-              Book a Call
-            </Button>
+            <a href="https://cal.com/hellopaul/discovery-call-with-paul" target="_blank" rel="noopener noreferrer">
+              <Button variant="default" size="sm" className="rounded-full px-5 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
+                Book a Call
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -58,9 +60,11 @@ const Navbar = () => {
                 <Link to="/auth" className="text-sm text-muted-foreground" onClick={() => setIsOpen(false)}>
                   Login
                 </Link>
-                <Button variant="default" size="sm" className="rounded-full">
-                  Book a Call
-                </Button>
+                <a href="https://cal.com/hellopaul/discovery-call-with-paul" target="_blank" rel="noopener noreferrer">
+                  <Button variant="default" size="sm" className="rounded-full">
+                    Book a Call
+                  </Button>
+                </a>
               </div>
             </div>
           </div>}
