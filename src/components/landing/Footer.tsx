@@ -34,7 +34,7 @@ const Footer = () => {
             </a>
             
             <p className="text-muted-foreground text-sm max-w-xs">
-              Blunicorn – Elevate Intelligence, Unleash Potential.
+              Automate Smarter. Scale Faster.
             </p>
 
             {/* Heart Icon */}
