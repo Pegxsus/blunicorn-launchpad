@@ -44,10 +44,7 @@ const N8NTemplatesSection = () => {
               <br />
               <span className="gradient-text">N8N Templates</span>
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Browse our collection of free, ready-to-use automation templates. 
-              Built by experts, customizable for your needs.
-            </p>
+            <p className="text-lg text-muted-foreground">Browse our collection of ready-to-use automation templates. Built by experts, customizable for your needs.</p>
           </div>
 
           {/* Templates Preview */}
