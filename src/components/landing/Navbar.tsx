@@ -83,34 +83,58 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && <div className="md:hidden mt-4 pb-4 border-t border-border/30 pt-4">
+        <div 
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="mt-4 pb-4 border-t border-border/30 pt-4">
             <div className="flex flex-col gap-4">
-              {navLinks.map(link => 
+              {navLinks.map((link, index) => 
                 link.isPage ? (
-                  <Link key={link.name} to={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300" onClick={() => setIsOpen(false)}>
+                  <Link 
+                    key={link.name} 
+                    to={link.href} 
+                    className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300"
+                    style={{ transitionDelay: isOpen ? `${index * 50}ms` : '0ms' }}
+                    onClick={() => setIsOpen(false)}
+                  >
                     {link.name}
                   </Link>
                 ) : (
-                  <a key={link.name} href={link.href} onClick={(e) => { handleAnchorClick(e, link.href); setIsOpen(false); }} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
+                  <a 
+                    key={link.name} 
+                    href={link.href} 
+                    onClick={(e) => { handleAnchorClick(e, link.href); setIsOpen(false); }} 
+                    className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300"
+                    style={{ transitionDelay: isOpen ? `${index * 50}ms` : '0ms' }}
+                  >
                     {link.name}
                   </a>
                 )
               )}
               <div className="flex flex-col gap-3 mt-2">
-                <Link to="/auth" className="text-sm text-muted-foreground" onClick={() => setIsOpen(false)}>
+                <Link 
+                  to="/auth" 
+                  className="text-sm text-muted-foreground transition-all duration-300" 
+                  style={{ transitionDelay: isOpen ? '150ms' : '0ms' }}
+                  onClick={() => setIsOpen(false)}
+                >
                   Login
                 </Link>
                 <Button 
                   variant="default" 
                   size="sm" 
-                  className="rounded-full"
+                  className="rounded-full transition-all duration-300"
+                  style={{ transitionDelay: isOpen ? '200ms' : '0ms' }}
                   onClick={() => { setIsBookCallOpen(true); setIsOpen(false); }}
                 >
                   Book a Call
                 </Button>
               </div>
             </div>
-          </div>}
+          </div>
+        </div>
       </div>
     </nav>;
 };
