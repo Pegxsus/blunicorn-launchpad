@@ -8,16 +8,16 @@ const About = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 relative">
+      <section className="pt-40 pb-24 relative">
         <div className="absolute inset-0 grid-background opacity-20" />
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl">
+        <div className="container mx-auto px-8 md:px-12 lg:px-16 relative z-10">
+          <div className="max-w-4xl animate-fade-in">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
               We've been quietly building{" "}
               <span className="text-primary">intelligent automation</span>{" "}
               solutions.
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl">
+            <p className="text-xl text-muted-foreground max-w-2xl opacity-0 animate-[fade-in_0.6s_ease-out_0.2s_forwards]">
               We help businesses transform their operations through cutting-edge AI and automation, 
               without the complexity of traditional implementations.
             </p>
@@ -26,11 +26,11 @@ const About = () => {
       </section>
 
       {/* The Breakthrough Section */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <section className="py-24 relative">
+        <div className="container mx-auto px-8 md:px-12 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left Content */}
-            <div className="space-y-6">
+            <div className="space-y-6 opacity-0 animate-[fade-in_0.6s_ease-out_0.3s_forwards]">
               <div className="flex items-center gap-2 text-primary">
                 <Zap className="w-5 h-5" />
                 <span className="font-semibold">The Breakthrough</span>
@@ -44,7 +44,7 @@ const About = () => {
             </div>
 
             {/* Right Content - Roadmap Card */}
-            <div className="glass-card p-8 rounded-2xl">
+            <div className="glass-card p-8 rounded-2xl opacity-0 animate-[fade-in_0.6s_ease-out_0.4s_forwards]">
               <p className="text-xs uppercase tracking-wider text-muted-foreground mb-6">
                 Our Journey
               </p>
@@ -76,13 +76,15 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 relative">
+      <section className="py-24 relative">
         <div className="absolute inset-0 grid-background opacity-10" />
-        <div className="container mx-auto px-6 relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">What We Stand For</h2>
+        <div className="container mx-auto px-8 md:px-12 lg:px-16 relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 opacity-0 animate-[fade-in_0.6s_ease-out_0.5s_forwards]">
+            What We Stand For
+          </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass-card p-8 rounded-2xl group hover:border-primary/50 transition-colors duration-300">
+            <div className="glass-card p-8 rounded-2xl group hover:border-primary/50 transition-all duration-300 opacity-0 animate-[fade-in_0.6s_ease-out_0.6s_forwards] hover:-translate-y-1">
               <Target className="w-10 h-10 text-primary mb-4" />
               <h3 className="text-xl font-semibold mb-3">Precision</h3>
               <p className="text-muted-foreground">
@@ -90,7 +92,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="glass-card p-8 rounded-2xl group hover:border-primary/50 transition-colors duration-300">
+            <div className="glass-card p-8 rounded-2xl group hover:border-primary/50 transition-all duration-300 opacity-0 animate-[fade-in_0.6s_ease-out_0.7s_forwards] hover:-translate-y-1">
               <Users className="w-10 h-10 text-primary mb-4" />
               <h3 className="text-xl font-semibold mb-3">Partnership</h3>
               <p className="text-muted-foreground">
@@ -98,7 +100,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="glass-card p-8 rounded-2xl group hover:border-primary/50 transition-colors duration-300">
+            <div className="glass-card p-8 rounded-2xl group hover:border-primary/50 transition-all duration-300 opacity-0 animate-[fade-in_0.6s_ease-out_0.8s_forwards] hover:-translate-y-1">
               <Lightbulb className="w-10 h-10 text-primary mb-4" />
               <h3 className="text-xl font-semibold mb-3">Innovation</h3>
               <p className="text-muted-foreground">
@@ -110,9 +112,9 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="glass-card p-12 rounded-2xl text-center">
+      <section className="py-24">
+        <div className="container mx-auto px-8 md:px-12 lg:px-16">
+          <div className="glass-card p-12 md:p-16 rounded-2xl text-center opacity-0 animate-[fade-in_0.6s_ease-out_0.9s_forwards]">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               Let's discuss how we can help you leverage AI and automation to achieve your goals.
@@ -122,7 +124,7 @@ const About = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors">
+              <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">
                 Book a Call
               </button>
             </a>
