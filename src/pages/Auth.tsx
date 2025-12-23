@@ -41,19 +41,19 @@ const Auth = () => {
       </Link>
 
       {/* Auth Card */}
-      <div className="relative z-10 w-full max-w-md mx-6">
-        <div className="glass-card rounded-2xl p-8 md:p-10 border border-border/50 shadow-2xl">
+      <div className="relative z-10 w-full max-w-sm mx-4">
+        <div className="glass-card rounded-2xl p-6 md:p-8 border border-border/50 shadow-2xl">
           {/* Logo & Header */}
-          <div className="text-center mb-8">
-            <Link to="/" className="inline-flex items-center gap-3 mb-6 group">
+          <div className="text-center mb-6">
+            <Link to="/" className="inline-flex items-center gap-2 mb-4 group">
               <img 
                 src={logo} 
                 alt="Blunicorn" 
-                className="h-12 w-auto rounded-lg transition-transform duration-300 group-hover:scale-110" 
+                className="h-10 w-auto rounded-lg transition-transform duration-300 group-hover:scale-110" 
               />
-              <span className="text-xl font-semibold">Blunicorn</span>
+              <span className="text-lg font-semibold">Blunicorn</span>
             </Link>
-            <h1 className="text-2xl md:text-3xl font-semibold mb-2">
+            <h1 className="text-xl md:text-2xl font-semibold mb-1">
               {isLogin ? "Welcome back" : "Create an account"}
             </h1>
             <p className="text-muted-foreground text-sm">
@@ -65,7 +65,7 @@ const Auth = () => {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="email" className="text-sm font-medium">
                 Email
@@ -126,7 +126,7 @@ const Auth = () => {
           </form>
 
           {/* Divider */}
-          <div className="relative my-8">
+          <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-border/50" />
             </div>
@@ -162,7 +162,7 @@ const Auth = () => {
           </Button>
 
           {/* Toggle Login/Signup */}
-          <p className="text-center text-sm text-muted-foreground mt-8">
+          <p className="text-center text-sm text-muted-foreground mt-6">
             {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
             <button
               type="button"
