@@ -20,10 +20,10 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <img src={logo} alt="Blunicorn" className="h-10 w-auto rounded-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
             <span className="text-lg font-semibold transition-colors duration-300 group-hover:text-primary font-sans">Blunicorn</span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
