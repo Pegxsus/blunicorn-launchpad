@@ -34,8 +34,8 @@ const HeroSection = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] mb-8 tracking-tight">Transform your business with 
-intelligent automation.<br />
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] mb-8 tracking-tight">
+            Transform your business<br />
             <span className="gradient-text animate-gradient bg-[length:200%_200%]">with intelligent automation.</span>
           </h1>
 
@@ -49,7 +49,7 @@ intelligent automation.<br />
               Start automating your business now!
             </span>
             <Button variant="default" className="rounded-full px-6 group">
-              Get Started
+              Book a Call
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>

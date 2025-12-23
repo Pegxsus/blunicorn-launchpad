@@ -36,7 +36,7 @@ const Navbar = () => {
               Login
             </a>
             <Button variant="default" size="sm" className="rounded-full px-5 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
-              Book a Demo
+              Book a Call
             </Button>
           </div>
 
@@ -57,7 +57,7 @@ const Navbar = () => {
                   Login
                 </a>
                 <Button variant="default" size="sm" className="rounded-full">
-                  Book a Demo
+                  Book a Call
                 </Button>
               </div>
             </div>
