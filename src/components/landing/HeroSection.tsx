@@ -48,10 +48,12 @@ const HeroSection = () => {
               <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
               Start automating your business now!
             </span>
-            <Button variant="default" className="rounded-full px-6 group">
-              Book a Call
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <a href="https://cal.com/hellopaul/discovery-call-with-paul" target="_blank" rel="noopener noreferrer">
+              <Button variant="default" className="rounded-full px-6 group">
+                Book a Call
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
