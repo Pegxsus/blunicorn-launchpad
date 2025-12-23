@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navLinks = [{
@@ -32,9 +34,9 @@ const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300">
+            <Link to="/auth" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300">
               Login
-            </a>
+            </Link>
             <Button variant="default" size="sm" className="rounded-full px-5 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
               Book a Call
             </Button>
@@ -53,9 +55,9 @@ const Navbar = () => {
                   {link.name}
                 </a>)}
               <div className="flex flex-col gap-3 mt-2">
-                <a href="#" className="text-sm text-muted-foreground">
+                <Link to="/auth" className="text-sm text-muted-foreground" onClick={() => setIsOpen(false)}>
                   Login
-                </a>
+                </Link>
                 <Button variant="default" size="sm" className="rounded-full">
                   Book a Call
                 </Button>
