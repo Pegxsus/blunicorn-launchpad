@@ -8,15 +8,15 @@ const CTASection = () => {
   const { ref, isRevealed } = useScrollReveal(0.1);
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden bg-background z-10">
+    <section id="contact" className="py-20 relative isolate overflow-hidden bg-background z-10">
       {/* Section Fade */}
       <div className="section-fade-top" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         {/* Newsletter Card */}
         <div 
           ref={ref}
-          className={`max-w-5xl mx-auto rounded-2xl border border-border bg-card/80 backdrop-blur-sm p-8 md:p-12 scroll-reveal-scale ${isRevealed ? 'revealed' : ''} hover:border-primary/30 transition-colors duration-500`}
+          className={`max-w-5xl mx-auto rounded-2xl border border-border bg-card/95 backdrop-blur-sm p-8 md:p-12 scroll-reveal-scale ${isRevealed ? 'revealed' : ''} hover:border-primary/30 transition-colors duration-500`}
         >
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             {/* Left Content */}
