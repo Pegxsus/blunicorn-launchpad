@@ -24,13 +24,13 @@ const Terms = () => {
               <h2 className="text-2xl font-semibold text-foreground mb-4">1. Terms</h2>
               <p className="text-muted-foreground leading-relaxed">
                 By accessing this website, accessible from{" "}
-                <a href="https://blunicorn.org" className="text-primary hover:underline">
-                  https://blunicorn.org
+                <a href="https://blukaze.com" className="text-primary hover:underline">
+                  https://blukaze.com
                 </a>
                 , you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                Blunicorn is an independent, unregistered startup offering AI automation and workflow development services.
+                Blukaze is an independent, unregistered startup offering AI automation and workflow development services.
               </p>
             </section>
 
@@ -38,7 +38,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">2. Services</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Blunicorn provides AI-powered automation services, including but not limited to:
+                Blukaze provides AI-powered automation services, including but not limited to:
               </p>
               <ul className="list-disc list-inside text-muted-foreground mt-4 space-y-2">
                 <li>n8n workflow design and implementation</li>
@@ -60,13 +60,13 @@ const Terms = () => {
               <ul className="list-disc list-inside text-muted-foreground mt-4 space-y-2">
                 <li>Clients are granted a non-exclusive, non-transferable license to use the delivered n8n workflows and automations for their internal business operations.</li>
                 <li>Ownership of custom workflows is transferred to the client only after full payment is received.</li>
-                <li>Blunicorn retains the right to reuse non-client-specific components, patterns, and learnings for future projects.</li>
+                <li>Blukaze retains the right to reuse non-client-specific components, patterns, and learnings for future projects.</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-6">You may not:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-4 space-y-2">
                 <li>Resell, sublicense, or redistribute workflows without written permission</li>
                 <li>Reverse engineer proprietary logic used for internal tooling or templates</li>
-                <li>Claim Blunicorn's work as your own for resale or public distribution</li>
+                <li>Claim Blukaze's work as your own for resale or public distribution</li>
               </ul>
             </section>
 
@@ -76,7 +76,7 @@ const Terms = () => {
               <p className="text-muted-foreground leading-relaxed">
                 AI-driven automations may produce probabilistic or non-deterministic outputs.
               </p>
-              <p className="text-muted-foreground leading-relaxed mt-4">Blunicorn:</p>
+              <p className="text-muted-foreground leading-relaxed mt-4">Blukaze:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-4 space-y-2">
                 <li>Does not guarantee 100% accuracy of AI-generated results</li>
                 <li>Is not responsible for decisions made solely based on AI outputs</li>
@@ -101,7 +101,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">6. Limitations of Liability</h2>
               <p className="text-muted-foreground leading-relaxed">
-                In no event shall Blunicorn be liable for any damages, including but not limited to:
+                In no event shall Blukaze be liable for any damages, including but not limited to:
               </p>
               <ul className="list-disc list-inside text-muted-foreground mt-4 space-y-2">
                 <li>Loss of data</li>
@@ -118,7 +118,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">7. Revisions and Modifications</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Blunicorn may revise these Terms of Service at any time without prior notice. By continuing to use the website or services, you agree to be bound by the current version.
+                Blukaze may revise these Terms of Service at any time without prior notice. By continuing to use the website or services, you agree to be bound by the current version.
               </p>
             </section>
 
@@ -128,7 +128,7 @@ const Terms = () => {
               <p className="text-muted-foreground leading-relaxed">
                 Our workflows may rely on third-party platforms (e.g., APIs, AI providers, SaaS tools).
               </p>
-              <p className="text-muted-foreground leading-relaxed mt-4">Blunicorn is not responsible for:</p>
+              <p className="text-muted-foreground leading-relaxed mt-4">Blukaze is not responsible for:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-4 space-y-2">
                 <li>Downtime or changes in third-party services</li>
                 <li>Pricing changes imposed by third-party providers</li>
@@ -140,7 +140,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">9. Intellectual Property</h2>
               <p className="text-muted-foreground leading-relaxed">
-                All branding, content, and materials on this website are the intellectual property of Blunicorn unless otherwise stated. Unauthorized use is prohibited.
+                All branding, content, and materials on this website are the intellectual property of Blukaze unless otherwise stated. Unauthorized use is prohibited.
               </p>
             </section>
 
@@ -167,10 +167,10 @@ const Terms = () => {
                 If you have any questions about these Terms of Service, please contact us at:
               </p>
               <a 
-                href="mailto:hello@blunicorn.org" 
+                href="mailto:hello@blukaze.com" 
                 className="inline-flex items-center gap-2 text-primary hover:underline mt-4 text-lg"
               >
-                📧 hello@blunicorn.org
+                📧 hello@blukaze.com
               </a>
             </section>
 

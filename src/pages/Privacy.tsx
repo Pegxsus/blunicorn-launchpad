@@ -19,9 +19,9 @@ const Privacy = () => {
 
             <div className="prose prose-invert max-w-none space-y-8">
               <p className="text-foreground/90 leading-relaxed">
-                Blunicorn ("we", "our", or "us") operates the website{" "}
-                <a href="https://blunicorn.org" className="text-primary hover:underline">
-                  https://blunicorn.org
+                Blukaze ("we", "our", or "us") operates the website{" "}
+                <a href="https://blukaze.com" className="text-primary hover:underline">
+                  https://blukaze.com
                 </a>
                 . This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or engage with our services.
               </p>
@@ -105,7 +105,7 @@ const Privacy = () => {
                   <li>Hosting and infrastructure providers</li>
                 </ul>
                 <p className="text-foreground/80">
-                  These services have their own privacy policies. Blunicorn is not responsible for third-party data handling practices.
+                  These services have their own privacy policies. Blukaze is not responsible for third-party data handling practices.
                 </p>
               </section>
 
@@ -170,7 +170,7 @@ const Privacy = () => {
               <section className="space-y-4">
                 <h2 className="text-2xl font-semibold text-foreground">9. Children's Privacy</h2>
                 <p className="text-foreground/80">
-                  Blunicorn does not knowingly collect data from individuals under the age of 13. If you believe such data has been collected, please contact us for removal.
+                  Blukaze does not knowingly collect data from individuals under the age of 13. If you believe such data has been collected, please contact us for removal.
                 </p>
               </section>
 
@@ -187,11 +187,11 @@ const Privacy = () => {
                   If you have any questions about this Privacy Policy or how your data is handled, contact us at:
                 </p>
                 <a
-                  href="mailto:hello@blunicorn.org"
+                  href="mailto:hello@blukaze.com"
                   className="inline-flex items-center gap-2 text-primary hover:underline"
                 >
                   <Mail className="w-5 h-5" />
-                  hello@blunicorn.org
+                  hello@blukaze.com
                 </a>
               </section>
             </div>

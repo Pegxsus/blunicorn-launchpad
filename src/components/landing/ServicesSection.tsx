@@ -66,7 +66,7 @@ const ServicesSection = () => {
             <span className="gradient-text">features</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Blunicorn delivers cutting-edge AI solutions with powerful, 
+            Blukaze delivers cutting-edge AI solutions with powerful, 
             easy-to-use features.
           </p>
         </div>
