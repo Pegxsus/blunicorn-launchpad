@@ -63,10 +63,10 @@ const Auth = () => {
             <Link to="/" className="inline-flex items-center gap-2 mb-4 group">
               <img 
                 src={logo} 
-                alt="Blunicorn" 
+                alt="Blukaze" 
                 className="h-10 w-auto rounded-lg transition-transform duration-300 group-hover:scale-110" 
               />
-              <span className="text-lg font-semibold">Blunicorn</span>
+              <span className="text-lg font-semibold">Blukaze</span>
             </Link>
             <h1 className="text-xl md:text-2xl font-semibold mb-1">
               {view === "forgot-password" 

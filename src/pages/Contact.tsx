@@ -20,10 +20,10 @@ const Contact = () => {
             
             {/* Email Address */}
             <a 
-              href="mailto:hello@blunicorn.org"
+              href="mailto:hello@blukaze.com"
               className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground hover:text-primary transition-colors duration-300 opacity-0 animate-[fade-in_0.6s_ease-out_0.2s_forwards]"
             >
-              hello@blunicorn.org
+              hello@blukaze.com
             </a>
             
             {/* Response Time */}

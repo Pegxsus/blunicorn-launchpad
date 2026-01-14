@@ -27,10 +27,10 @@ const Footer = () => {
             <a href="#" className="flex items-center gap-3 group">
               <img 
                 src={logo} 
-                alt="Blunicorn" 
+                alt="Blukaze" 
                 className="h-10 w-auto rounded-lg transition-transform duration-300 group-hover:scale-110" 
               />
-              <span className="text-lg font-semibold transition-colors duration-300 group-hover:text-primary">Blunicorn</span>
+              <span className="text-lg font-semibold transition-colors duration-300 group-hover:text-primary">Blukaze</span>
             </a>
             
             <p className="text-muted-foreground text-sm max-w-xs">
@@ -91,7 +91,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border pt-8">
           <p className="text-muted-foreground text-sm">
-            © {currentYear} Blunicorn. All rights reserved.
+            © {currentYear} Blukaze. All rights reserved.
           </p>
         </div>
       </div>
