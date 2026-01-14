@@ -61,9 +61,9 @@ const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Link to="/auth" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300">
+            <a href="https://app.blukaze.com" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300">
               Login
-            </Link>
+            </a>
             <Button 
               variant="default" 
               size="sm" 
@@ -114,14 +114,13 @@ const Navbar = () => {
                 )
               )}
               <div className="flex flex-col gap-3 mt-2">
-                <Link 
-                  to="/auth" 
+                <a 
+                  href="https://app.blukaze.com" 
                   className="text-sm text-muted-foreground transition-all duration-300" 
                   style={{ transitionDelay: isOpen ? '150ms' : '0ms' }}
-                  onClick={() => setIsOpen(false)}
                 >
                   Login
-                </Link>
+                </a>
                 <Button 
                   variant="default" 
                   size="sm" 
