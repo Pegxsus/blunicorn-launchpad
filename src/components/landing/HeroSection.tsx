@@ -39,8 +39,8 @@ const HeroSection = () => {
 
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] mb-8 tracking-tight">
-            Production grade automations<br />
-            <span className="gradient-text animate-gradient bg-[length:200%_200%]">for teams that can't afford failures.</span>
+            Transform your business<br />
+            <span className="gradient-text animate-gradient bg-[length:200%_200%]">with intelligent automation.</span>
           </h1>
 
           {/* Subheadline */}
