@@ -19,7 +19,7 @@ const HeroSection = () => {
   const { ref, isRevealed } = useScrollReveal(0.1);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-20 pb-0">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-24 pb-0">
       {/* Background glow */}
       <div className="absolute top-0 right-0 w-[60%] h-full bg-gradient-to-l from-primary/5 via-transparent to-transparent pointer-events-none" />
       <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-primary/8 blur-[120px] pointer-events-none" />
@@ -27,23 +27,23 @@ const HeroSection = () => {
       <div className="section-fade-bottom" />
 
       {/* Main content */}
-      <div className="container mx-auto px-6 relative z-10 flex-1 flex items-center">
+      <div className="container mx-auto px-8 md:px-12 lg:px-20 relative z-10 flex-1 flex items-center">
         <div ref={ref} className={`w-full scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left — Text */}
-            <div className="max-w-xl">
+            <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.1] mb-6 tracking-tight text-foreground/80">
                 Intelligent AI automation
                 <br />
                 <span className="gradient-text font-semibold">for growing businesses</span>
               </h1>
 
-              <p className="text-base md:text-lg text-muted-foreground max-w-lg mb-10 leading-relaxed">
+              <p className="text-base md:text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 mb-10 leading-relaxed">
                 Build with the reliability of expert engineering. We design, build, and maintain 
                 custom AI automations that save time, reduce errors, and scale with you. Powered by n8n.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                 <Button
                   size="lg"
                   className="rounded-full px-8 text-base group"
@@ -76,7 +76,7 @@ const HeroSection = () => {
 
       {/* Use case cards — bottom strip */}
       <div className="relative z-10 mt-8 pb-0">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-8 md:px-12 lg:px-20">
           <div className={`grid grid-cols-2 md:grid-cols-5 gap-3 scroll-reveal delay-300 ${isRevealed ? 'revealed' : ''}`}>
             {useCases.map((uc, i) => (
               <button
