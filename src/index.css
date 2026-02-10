@@ -15,7 +15,7 @@
     --popover: 220 18% 10%;
     --popover-foreground: 210 20% 96%;
 
-    --primary: 24 90% 55%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 15% 14%;
@@ -24,7 +24,7 @@
     --muted: 220 12% 18%;
     --muted-foreground: 220 10% 50%;
 
-    --accent: 24 90% 55%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,14 +32,14 @@
 
     --border: 220 15% 16%;
     --input: 220 15% 16%;
-    --ring: 24 90% 55%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
     /* Gradient accents */
-    --gradient-start: 24 90% 55%;
-    --gradient-mid: 16 85% 50%;
-    --gradient-end: 340 75% 55%;
+    --gradient-start: 217 91% 60%;
+    --gradient-mid: 200 85% 50%;
+    --gradient-end: 250 75% 60%;
   }
 }
 
