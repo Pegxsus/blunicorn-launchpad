@@ -6,7 +6,7 @@ import heroImage from "@/assets/hero-lightning.png";
 import BookCallDialog from "./BookCallDialog";
 
 const useCases = [
-  { label: "Lead Gen", highlight: "Capture & qualify leads automatically", active: true },
+  { label: "Lead Gen", highlight: "Capture & qualify leads automatically" },
   { label: "Customer Ops", highlight: "Automate onboarding workflows" },
   { label: "Data Sync", highlight: "Keep systems in perfect sync" },
   { label: "AI Agents", highlight: "Deploy intelligent assistants" },
@@ -67,7 +67,7 @@ const HeroSection = () => {
                 src={heroImage}
                 alt="AI Automation"
                 className="relative z-10 w-full max-w-md object-contain drop-shadow-2xl"
-                style={{ filter: 'drop-shadow(0 0 60px hsl(var(--primary) / 0.3))' }}
+                style={{ filter: 'drop-shadow(0 0 60px hsl(217 91% 60% / 0.3))' }}
               />
             </div>
           </div>
@@ -95,7 +95,6 @@ const HeroSection = () => {
             ))}
           </div>
         </div>
-        {/* Bottom gradient border */}
         <div className="h-px mt-6 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       </div>
 

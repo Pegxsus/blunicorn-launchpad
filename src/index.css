@@ -16,7 +16,7 @@
     --popover: 228 18% 9%;
     --popover-foreground: 210 20% 90%;
 
-    --primary: 25 95% 53%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 228 15% 12%;
@@ -25,7 +25,7 @@
     --muted: 228 12% 16%;
     --muted-foreground: 228 10% 48%;
 
-    --accent: 25 95% 53%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,11 +33,11 @@
 
     --border: 228 12% 14%;
     --input: 228 12% 14%;
-    --ring: 25 95% 53%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
-    --glow-primary: 25 95% 53%;
+    --glow-primary: 217 91% 60%;
   }
 }
 
@@ -54,7 +54,7 @@
 
 @layer components {
   .gradient-text {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(30 100% 65%));
+    background: linear-gradient(135deg, hsl(217 91% 60%), hsl(200 100% 65%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -81,7 +81,6 @@
     @apply absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-10;
   }
 
-  /* Use case card */
   .use-case-card {
     @apply relative flex-1 p-5 rounded-xl border border-border/50 bg-card/60 backdrop-blur-sm cursor-pointer transition-all duration-300;
     @apply hover:border-primary/40 hover:bg-card/80;
@@ -136,6 +135,11 @@
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 html {

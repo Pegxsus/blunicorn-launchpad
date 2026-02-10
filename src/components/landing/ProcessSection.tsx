@@ -1,4 +1,4 @@
-import { Bot, Settings, Rocket, ArrowRight } from "lucide-react";
+import { Bot, Settings, Rocket, ArrowRight, Check } from "lucide-react";
 import useScrollReveal from "@/hooks/useScrollReveal";
 
 const steps = [
@@ -7,18 +7,21 @@ const steps = [
     number: "01",
     title: "Discovery",
     description: "We analyze your workflows and identify the best automation opportunities for your business.",
+    checks: ["Audit existing processes", "Identify quick wins"],
   },
   {
     icon: Settings,
     number: "02",
-    title: "Customize",
+    title: "Build & Customize",
     description: "Our experts design and build custom AI solutions tailored to your specific needs.",
+    checks: ["Custom n8n workflows", "AI agent integration"],
   },
   {
     icon: Rocket,
     number: "03",
-    title: "Launch",
+    title: "Launch & Iterate",
     description: "Deploy your automation and watch your business efficiency soar to new heights.",
+    checks: ["Go live in days", "Ongoing optimization"],
   },
 ];
 
@@ -36,12 +39,10 @@ const ProcessSection = () => {
         <div className={`max-w-2xl mb-16 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
           <p className="text-primary text-sm font-semibold tracking-wide uppercase mb-4">How it works</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-5 tracking-tight leading-tight">
-            Three steps to
-            <br />
-            <span className="gradient-text">smarter automation</span>
+            Design. Build. Repeat.
           </h2>
           <p className="text-muted-foreground text-lg max-w-lg">
-            Turn your business processes into a seamless experience in just three simple steps.
+            The same fast feedback loops that make great engineering — applied to your automation.
           </p>
         </div>
 
@@ -52,7 +53,6 @@ const ProcessSection = () => {
               className={`group relative scroll-reveal delay-${(index + 1) * 100} ${isRevealed ? 'revealed' : ''}`}
             >
               <div className="p-7 rounded-2xl border border-border/40 bg-card/40 hover:border-primary/30 hover:bg-card/60 transition-all duration-300">
-                {/* Number */}
                 <span className="text-5xl font-bold text-border/60 group-hover:text-primary/20 transition-colors duration-300 block mb-4">{step.number}</span>
                 
                 <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mb-5 group-hover:bg-primary/15 group-hover:scale-110 transition-all duration-300">
@@ -60,12 +60,20 @@ const ProcessSection = () => {
                 </div>
 
                 <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{step.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                   {step.description}
                 </p>
+
+                <div className="space-y-2">
+                  {step.checks.map((check) => (
+                    <div key={check} className="flex items-center gap-2 text-sm">
+                      <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                      <span className="text-muted-foreground">{check}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              {/* Arrow connector */}
               {index < steps.length - 1 && (
                 <div className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10">
                   <ArrowRight className="w-5 h-5 text-border" />
