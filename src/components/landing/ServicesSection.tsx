@@ -44,14 +44,14 @@ const ServicesSection = () => {
       <div className="absolute inset-0 dot-grid opacity-30" />
 
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
-        <div className={`max-w-2xl mb-16 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
+        <div className={`text-center max-w-2xl mx-auto mb-16 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
           <p className="text-primary text-sm font-semibold tracking-wide uppercase mb-4">What we do</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-5 tracking-tight leading-tight">
-            Everything you need to
+            The fast way to actually
             <br />
-            <span className="gradient-text">automate at scale</span>
+            <span className="gradient-text">get AI working in your business</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-lg">
+          <p className="text-muted-foreground text-lg">
             Blukaze delivers cutting-edge AI solutions with powerful, easy-to-use features.
           </p>
         </div>

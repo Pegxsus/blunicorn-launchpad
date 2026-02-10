@@ -13,7 +13,7 @@ const Footer = () => {
               <img src={logo} alt="Blukaze" className="h-8 w-auto rounded-lg" />
               <span className="text-lg font-bold text-foreground">Blukaze</span>
             </Link>
-            <p className="text-muted-foreground text-sm">Automate Smarter. Scale Faster.</p>
+            <p className="text-muted-foreground text-sm">Automation with human touch.</p>
           </div>
 
           <div className="hidden md:block" />
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border/20 pt-6">
-          <p className="text-muted-foreground text-sm">© {currentYear} Blukaze. All rights reserved.</p>
+          <p className="text-muted-foreground text-sm">© {currentYear} Blukaze — Automation with human touch. All rights reserved.</p>
         </div>
       </div>
     </footer>
