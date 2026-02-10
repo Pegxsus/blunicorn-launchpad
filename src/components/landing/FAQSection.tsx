@@ -1,4 +1,3 @@
-import { HelpCircle } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -41,37 +40,38 @@ const FAQSection = () => {
   return (
     <section className="py-28 px-6 relative">
       <div className="section-fade-top" />
-      <div className="absolute inset-0 dot-grid opacity-10" />
 
-      <div className="max-w-3xl mx-auto relative z-10" ref={ref}>
-        <div className={`mb-14 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
-          <p className="text-primary text-sm font-semibold tracking-wide uppercase mb-4">FAQ</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-5 tracking-tight">
-            Frequently asked
-            <br />
-            <span className="gradient-text">questions</span>
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Everything you need to know about our automation services
-          </p>
+      <div className="max-w-6xl mx-auto relative z-10" ref={ref}>
+        <div className={`flex flex-col lg:flex-row gap-12 lg:gap-20 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
+          {/* Left: Heading */}
+          <div className="lg:w-1/3 shrink-0">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight">
+              Frequently asked
+              <br />
+              questions.
+            </h2>
+          </div>
+
+          {/* Right: Accordion */}
+          <div className="lg:w-2/3">
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="border-b border-border/30 rounded-none px-0 bg-transparent"
+                >
+                  <AccordionTrigger className="text-left text-base font-medium hover:no-underline hover:text-primary transition-colors py-6">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-6">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
-
-        <Accordion type="single" collapsible className={`w-full space-y-2 scroll-reveal delay-200 ${isRevealed ? 'revealed' : ''}`}>
-          {faqs.map((faq, index) => (
-            <AccordionItem
-              key={index}
-              value={`item-${index}`}
-              className="border border-border/40 rounded-xl px-6 bg-card/30 data-[state=open]:border-primary/25 data-[state=open]:bg-card/50 transition-all"
-            >
-              <AccordionTrigger className="text-left text-base font-medium hover:no-underline hover:text-primary transition-colors py-5">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
       </div>
     </section>
   );
