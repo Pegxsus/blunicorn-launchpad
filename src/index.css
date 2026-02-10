@@ -7,40 +7,37 @@
 
 @layer base {
   :root {
-    --background: 220 20% 7%;
-    --foreground: 210 20% 96%;
+    --background: 228 20% 6%;
+    --foreground: 210 20% 90%;
 
-    --card: 220 18% 10%;
-    --card-foreground: 210 20% 96%;
+    --card: 228 18% 9%;
+    --card-foreground: 210 20% 90%;
 
-    --popover: 220 18% 10%;
-    --popover-foreground: 210 20% 96%;
+    --popover: 228 18% 9%;
+    --popover-foreground: 210 20% 90%;
 
-    --primary: 217 91% 60%;
+    --primary: 25 95% 53%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 14%;
-    --secondary-foreground: 210 20% 96%;
+    --secondary: 228 15% 12%;
+    --secondary-foreground: 210 20% 90%;
 
-    --muted: 220 12% 18%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 228 12% 16%;
+    --muted-foreground: 228 10% 48%;
 
-    --accent: 217 91% 60%;
+    --accent: 25 95% 53%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 16%;
-    --input: 220 15% 16%;
-    --ring: 217 91% 60%;
+    --border: 228 12% 14%;
+    --input: 228 12% 14%;
+    --ring: 25 95% 53%;
 
     --radius: 0.75rem;
 
-    /* Gradient accents */
-    --gradient-start: 217 91% 60%;
-    --gradient-mid: 200 85% 50%;
-    --gradient-end: 250 75% 60%;
+    --glow-primary: 25 95% 53%;
   }
 }
 
@@ -57,13 +54,10 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-[hsl(var(--gradient-start))] via-[hsl(var(--gradient-mid))] to-[hsl(var(--gradient-end))] bg-clip-text text-transparent;
-  }
-
-  .gradient-text-warm {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--gradient-end)));
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(30 100% 65%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .glass-card {
@@ -71,38 +65,14 @@
   }
 
   .pill-badge {
-    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/10 text-sm text-primary font-medium;
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/8 text-sm text-primary font-medium;
   }
 
-  /* Dot grid background like n8n */
   .dot-grid {
-    background-image: radial-gradient(circle, hsl(var(--muted-foreground) / 0.12) 1px, transparent 1px);
+    background-image: radial-gradient(circle, hsl(var(--muted-foreground) / 0.08) 1px, transparent 1px);
     background-size: 32px 32px;
   }
 
-  /* Node connection line */
-  .node-line {
-    @apply absolute w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent;
-  }
-
-  /* Workflow node style card */
-  .node-card {
-    @apply relative bg-card border border-border rounded-2xl p-6 transition-all duration-300;
-    @apply hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1;
-  }
-
-  .node-card::before {
-    content: '';
-    @apply absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full border-2 border-border bg-background;
-    transition: all 0.3s;
-  }
-
-  .node-card:hover::before {
-    border-color: hsl(var(--primary));
-    box-shadow: 0 0 12px hsl(var(--primary) / 0.4);
-  }
-
-  /* Section transition fades */
   .section-fade-top {
     @apply absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background to-transparent pointer-events-none z-10;
   }
@@ -110,10 +80,19 @@
   .section-fade-bottom {
     @apply absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-10;
   }
+
+  /* Use case card */
+  .use-case-card {
+    @apply relative flex-1 p-5 rounded-xl border border-border/50 bg-card/60 backdrop-blur-sm cursor-pointer transition-all duration-300;
+    @apply hover:border-primary/40 hover:bg-card/80;
+  }
+
+  .use-case-card.active {
+    @apply border-primary/60 bg-gradient-to-b from-primary/10 to-card/80;
+  }
 }
 
 @layer utilities {
-  /* Scroll reveal */
   .scroll-reveal {
     opacity: 0;
     transform: translateY(24px);
@@ -147,7 +126,6 @@
     transform: scale(1);
   }
 
-  /* Stagger delays */
   .delay-100 { transition-delay: 100ms; }
   .delay-200 { transition-delay: 200ms; }
   .delay-300 { transition-delay: 300ms; }
@@ -158,16 +136,6 @@
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
-}
-
-@keyframes pulse-node {
-  0%, 100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.3); }
-  50% { box-shadow: 0 0 0 8px hsl(var(--primary) / 0); }
-}
-
-@keyframes flow-line {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 40px; }
 }
 
 html {

@@ -39,19 +39,14 @@ const FAQSection = () => {
   const { ref, isRevealed } = useScrollReveal(0.1);
 
   return (
-    <section className="py-32 px-6 relative">
+    <section className="py-28 px-6 relative">
       <div className="section-fade-top" />
       <div className="absolute inset-0 dot-grid opacity-10" />
 
       <div className="max-w-3xl mx-auto relative z-10" ref={ref}>
-        <div className={`text-center mb-14 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
-          <div className="flex justify-center mb-6">
-            <div className="pill-badge">
-              <HelpCircle className="w-3.5 h-3.5" />
-              FAQ
-            </div>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+        <div className={`mb-14 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
+          <p className="text-primary text-sm font-semibold tracking-wide uppercase mb-4">FAQ</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-5 tracking-tight">
             Frequently asked
             <br />
             <span className="gradient-text">questions</span>
@@ -61,12 +56,12 @@ const FAQSection = () => {
           </p>
         </div>
 
-        <Accordion type="single" collapsible className={`w-full space-y-3 scroll-reveal delay-200 ${isRevealed ? 'revealed' : ''}`}>
+        <Accordion type="single" collapsible className={`w-full space-y-2 scroll-reveal delay-200 ${isRevealed ? 'revealed' : ''}`}>
           {faqs.map((faq, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="border border-border/50 rounded-xl px-6 bg-card/40 data-[state=open]:border-primary/30 data-[state=open]:bg-card/60 transition-all"
+              className="border border-border/40 rounded-xl px-6 bg-card/30 data-[state=open]:border-primary/25 data-[state=open]:bg-card/50 transition-all"
             >
               <AccordionTrigger className="text-left text-base font-medium hover:no-underline hover:text-primary transition-colors py-5">
                 {faq.question}
