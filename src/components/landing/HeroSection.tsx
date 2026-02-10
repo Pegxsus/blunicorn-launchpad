@@ -56,7 +56,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
       <BookCallDialog open={isBookCallOpen} onOpenChange={setIsBookCallOpen} />
     </section>
