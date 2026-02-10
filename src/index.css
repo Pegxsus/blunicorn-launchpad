@@ -137,6 +137,18 @@
   50% { transform: translateY(-8px); }
 }
 
+@keyframes boltFlicker {
+  0%, 100% { opacity: 1; filter: brightness(1); }
+  30% { opacity: 0.85; filter: brightness(1.2); }
+  50% { opacity: 1; filter: brightness(1.4); }
+  70% { opacity: 0.9; filter: brightness(1.1); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
 @keyframes scroll-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
