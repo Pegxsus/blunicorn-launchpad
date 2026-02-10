@@ -32,28 +32,28 @@ const N8NTemplatesSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div ref={ref} className={`scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
-          <div className="max-w-2xl mb-16">
-            <div className="flex items-center gap-2 mb-4">
+          <div className="max-w-2xl mx-auto text-center mb-16">
+            <div className="flex items-center justify-center gap-2 mb-4">
               <img src={n8nLogo} alt="n8n" className="h-5 w-5 rounded" />
-              <p className="text-primary text-sm font-semibold tracking-wide uppercase">Free Templates</p>
+              <p className="text-primary text-sm font-semibold tracking-wide uppercase">Templates</p>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-5 tracking-tight leading-tight">
               Jumpstart with
               <br />
               <span className="gradient-text">ready-made templates</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-lg">
+            <p className="text-muted-foreground text-lg max-w-lg mx-auto">
               Browse our collection of ready-to-use automation templates. Built by experts, customizable for your needs.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4 max-w-4xl mb-10">
+          <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-10">
             {templates.map((template, index) => (
               <div
                 key={template.title}
-                className={`scroll-reveal delay-${(index + 1) * 100} ${isRevealed ? 'revealed' : ''} group p-6 rounded-2xl border border-border/40 bg-card/40 hover:border-primary/30 hover:bg-card/60 hover:-translate-y-1 transition-all duration-300 cursor-pointer`}
+                className={`scroll-reveal delay-${(index + 1) * 100} ${isRevealed ? 'revealed' : ''} group p-6 rounded-2xl border border-border/40 bg-card/40 hover:border-primary/30 hover:bg-card/60 hover:-translate-y-1 transition-all duration-300 cursor-pointer text-center`}
               >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mb-4 group-hover:bg-primary/15 group-hover:scale-110 transition-all duration-300">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/15 group-hover:scale-110 transition-all duration-300">
                   <template.icon className="w-5 h-5 text-primary" />
                 </div>
                 <h3 className="text-base font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{template.title}</h3>
@@ -64,12 +64,14 @@ const N8NTemplatesSection = () => {
             ))}
           </div>
 
-          <a href="https://n8n.io/creators/hellopaul/" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="lg" className="group rounded-full px-8 border-border/60 hover:border-primary/40 text-foreground/80">
-              Browse All Templates
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </a>
+          <div className="text-center">
+            <a href="https://n8n.io/creators/hellopaul/" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" className="group rounded-full px-8 border-border/60 hover:border-primary/40 text-foreground/80">
+                Browse All Templates
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
