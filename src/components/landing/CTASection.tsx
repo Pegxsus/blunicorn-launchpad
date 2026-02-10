@@ -21,16 +21,13 @@ const CTASection = () => {
             can't automate with <span className="gradient-text">Blukaze</span>
           </h2>
 
-          <p className="text-muted-foreground text-lg mb-4">
-            Our clients' results speak for themselves.
-          </p>
           <p className="text-muted-foreground text-base mb-10">
-            Skeptical? <a href="/contact" className="text-primary hover:underline">Talk to us</a>, and see for yourself.
+            Skeptical? Talk to us, and see for yourself.
           </p>
 
           <Button
             size="lg"
-            className="rounded-full px-10 text-base group"
+            className="rounded-full px-8 text-sm group"
             onClick={() => setIsBookCallOpen(true)}
           >
             Book a Discovery Call

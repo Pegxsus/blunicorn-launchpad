@@ -20,8 +20,8 @@ const Index = () => {
         <ProcessSection />
         <N8NTemplatesSection />
         <TestimonialsSection />
-        <CTASection />
         <FAQSection />
+        <CTASection />
       </main>
       <Footer />
     </div>
