@@ -30,16 +30,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/40">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/30">
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img src={logo} alt="Blukaze" className="h-9 w-auto rounded-lg transition-transform duration-300 group-hover:scale-105" />
-            <span className="text-lg font-bold transition-colors duration-300 group-hover:text-primary">Blukaze</span>
+            <img src={logo} alt="Blukaze" className="h-8 w-auto rounded-lg" />
+            <span className="text-lg font-bold text-foreground">Blukaze</span>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map(link =>
               link.isPage ? (
@@ -54,29 +52,26 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
             <a href="https://app.blukaze.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-              Login
+              Sign in
             </a>
             <Button
               size="sm"
               className="rounded-full px-5"
               onClick={() => setIsBookCallOpen(true)}
             >
-              Book a Call
+              Get Started
             </Button>
           </div>
 
           <BookCallDialog open={isBookCallOpen} onOpenChange={setIsBookCallOpen} />
 
-          {/* Mobile Menu Toggle */}
           <button className="md:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="mt-4 pb-4 border-t border-border/30 pt-4">
             <div className="flex flex-col gap-4">
@@ -92,15 +87,9 @@ const Navbar = () => {
                 )
               )}
               <div className="flex flex-col gap-3 mt-2">
-                <a href="https://app.blukaze.com" className="text-sm text-muted-foreground transition-colors">
-                  Login
-                </a>
-                <Button
-                  size="sm"
-                  className="rounded-full"
-                  onClick={() => { setIsBookCallOpen(true); setIsOpen(false); }}
-                >
-                  Book a Call
+                <a href="https://app.blukaze.com" className="text-sm text-muted-foreground">Sign in</a>
+                <Button size="sm" className="rounded-full" onClick={() => { setIsBookCallOpen(true); setIsOpen(false); }}>
+                  Get Started
                 </Button>
               </div>
             </div>

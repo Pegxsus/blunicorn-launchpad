@@ -38,45 +38,33 @@ const ServicesSection = () => {
   const { ref, isRevealed } = useScrollReveal(0.1);
 
   return (
-    <section id="services" className="py-32 relative overflow-hidden">
+    <section id="services" className="py-28 relative overflow-hidden">
       <div className="section-fade-top" />
       <div className="section-fade-bottom" />
-      
-      <div className="absolute inset-0 dot-grid opacity-20" />
+      <div className="absolute inset-0 dot-grid opacity-30" />
 
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
-        {/* Section Header */}
-        <div className={`text-center max-w-2xl mx-auto mb-20 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
-          <div className="flex justify-center mb-6">
-            <div className="pill-badge">
-              <Zap className="w-3.5 h-3.5" />
-              Features
-            </div>
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+        <div className={`max-w-2xl mb-16 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
+          <p className="text-primary text-sm font-semibold tracking-wide uppercase mb-4">What we do</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-5 tracking-tight leading-tight">
             Everything you need to
             <br />
             <span className="gradient-text">automate at scale</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Blukaze delivers cutting-edge AI solutions with powerful,
-            easy-to-use features.
+          <p className="text-muted-foreground text-lg max-w-lg">
+            Blukaze delivers cutting-edge AI solutions with powerful, easy-to-use features.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border/30 rounded-2xl overflow-hidden border border-border/40">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`group scroll-reveal delay-${(index % 3 + 1) * 100} ${isRevealed ? 'revealed' : ''} p-6 rounded-2xl border border-transparent transition-all duration-300 hover:bg-card/60 hover:border-border hover:shadow-lg hover:shadow-primary/5 cursor-pointer`}
+              className={`group scroll-reveal delay-${(index % 3 + 1) * 100} ${isRevealed ? 'revealed' : ''} p-7 bg-background hover:bg-card/80 transition-all duration-300 cursor-pointer`}
             >
-              {/* Icon */}
-              <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5 group-hover:bg-primary/15 group-hover:scale-110 transition-all duration-300">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mb-5 group-hover:bg-primary/15 group-hover:scale-110 transition-all duration-300">
                 <service.icon className="w-5 h-5 text-primary" />
               </div>
-
-              {/* Content */}
               <h3 className="text-base font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {service.description}
