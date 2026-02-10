@@ -24,7 +24,7 @@ const steps = [
     icon: Rocket,
     number: "3",
     title: "Launch & Iterate",
-    description: "Go live in days with our client dashboard managing delivery, feedback, and iterations — all in one place.",
+    description: "Go live in days with our client dashboard managing delivery, feedback, and iterations all in one place.",
     checks: ["End-to-end visibility", "Real-time feedback loop"],
     iconColor: "text-green-400",
     iconBg: "bg-green-500/10 border-green-500/15",
@@ -48,7 +48,7 @@ const ProcessSection = () => {
             Design. Build. Repeat.
           </h2>
           <p className="text-muted-foreground text-lg max-w-lg mx-auto">
-            The same fast feedback loops that make great engineering — applied to your automation.
+            The same fast feedback loops that make great engineering  applied to your automation.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ const ProcessSection = () => {
               key={step.title}
               className={`group relative scroll-reveal delay-${(index + 1) * 100} ${isRevealed ? 'revealed' : ''}`}
             >
-              <div className="p-7 rounded-2xl border border-border/40 bg-card/40 hover:border-primary/30 hover:bg-card/60 transition-all duration-300">
+              <div className="p-7 rounded-2xl border border-border/40 bg-card/40 hover:border-primary/30 hover:bg-card/60 transition-all duration-300 h-full flex flex-col">
                 <span className="text-5xl font-bold text-muted-foreground/40 group-hover:text-muted-foreground/60 transition-colors duration-300 block mb-4">{step.number}</span>
                 
                 <div className={`w-10 h-10 rounded-lg ${step.iconBg} border flex items-center justify-center mb-5 group-hover:scale-110 transition-all duration-300`}>
