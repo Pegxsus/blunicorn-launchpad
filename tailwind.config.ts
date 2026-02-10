@@ -50,11 +50,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gradient: {
-          purple: "hsl(var(--gradient-purple))",
-          blue: "hsl(var(--gradient-blue))",
-          pink: "hsl(var(--gradient-pink))",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -87,8 +82,6 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'hero-gradient': 'linear-gradient(135deg, hsl(var(--gradient-purple)) 0%, hsl(var(--gradient-blue)) 50%, hsl(var(--gradient-pink)) 100%)',
       },
     },
   },

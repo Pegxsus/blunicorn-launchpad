@@ -2,44 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @layer base {
   :root {
-    --background: 222 47% 6%;
-    --foreground: 0 0% 98%;
+    --background: 220 20% 7%;
+    --foreground: 210 20% 96%;
 
-    --card: 222 40% 8%;
-    --card-foreground: 0 0% 98%;
+    --card: 220 18% 10%;
+    --card-foreground: 210 20% 96%;
 
-    --popover: 222 40% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 18% 10%;
+    --popover-foreground: 210 20% 96%;
 
-    --primary: 217 91% 60%;
+    --primary: 24 90% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 222 35% 12%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 220 15% 14%;
+    --secondary-foreground: 210 20% 96%;
 
-    --muted: 222 25% 18%;
-    --muted-foreground: 222 10% 55%;
+    --muted: 220 12% 18%;
+    --muted-foreground: 220 10% 50%;
 
-    --accent: 217 91% 60%;
+    --accent: 24 90% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 222 20% 15%;
-    --input: 222 20% 15%;
-    --ring: 217 91% 60%;
+    --border: 220 15% 16%;
+    --input: 220 15% 16%;
+    --ring: 24 90% 55%;
 
     --radius: 0.75rem;
 
-    /* Custom gradient colors */
-    --gradient-purple: 263 70% 58%;
-    --gradient-blue: 217 91% 60%;
-    --gradient-pink: 330 80% 60%;
+    /* Gradient accents */
+    --gradient-start: 24 90% 55%;
+    --gradient-mid: 16 85% 50%;
+    --gradient-end: 340 75% 55%;
   }
 }
 
@@ -49,118 +49,76 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 }
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-[hsl(var(--gradient-purple))] via-[hsl(var(--gradient-blue))] to-[hsl(var(--gradient-pink))] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[hsl(var(--gradient-start))] via-[hsl(var(--gradient-mid))] to-[hsl(var(--gradient-end))] bg-clip-text text-transparent;
   }
 
-  .gradient-border {
-    @apply relative;
-    background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
-                linear-gradient(135deg, hsl(var(--gradient-purple)), hsl(var(--gradient-blue)), hsl(var(--gradient-pink))) border-box;
-    border: 1px solid transparent;
+  .gradient-text-warm {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--gradient-end)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .glass-card {
-    @apply backdrop-blur-xl bg-card/60 border border-border/50;
+    @apply backdrop-blur-xl bg-card/70 border border-border/50 rounded-2xl;
   }
 
   .pill-badge {
-    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/80 text-sm text-muted-foreground;
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/10 text-sm text-primary font-medium;
   }
 
-  /* Grid background pattern */
-  .grid-background {
-    background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 80px 80px;
+  /* Dot grid background like n8n */
+  .dot-grid {
+    background-image: radial-gradient(circle, hsl(var(--muted-foreground) / 0.12) 1px, transparent 1px);
+    background-size: 32px 32px;
   }
 
-  /* Subtle top gradient */
-  .gradient-overlay {
-    background: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--primary) / 0.15), transparent);
+  /* Node connection line */
+  .node-line {
+    @apply absolute w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent;
   }
 
-  /* Animated gradient orb */
-  .gradient-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.4;
-    animation: orb-float 8s ease-in-out infinite;
+  /* Workflow node style card */
+  .node-card {
+    @apply relative bg-card border border-border rounded-2xl p-6 transition-all duration-300;
+    @apply hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1;
   }
 
-  .gradient-orb-1 {
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(135deg, hsl(var(--gradient-purple)), hsl(var(--gradient-blue)));
-    top: 10%;
-    left: 10%;
-    animation-delay: 0s;
+  .node-card::before {
+    content: '';
+    @apply absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full border-2 border-border bg-background;
+    transition: all 0.3s;
   }
 
-  .gradient-orb-2 {
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(135deg, hsl(var(--gradient-blue)), hsl(var(--gradient-pink)));
-    top: 50%;
-    right: 10%;
-    animation-delay: -3s;
+  .node-card:hover::before {
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 12px hsl(var(--primary) / 0.4);
   }
 
-  .gradient-orb-3 {
-    width: 250px;
-    height: 250px;
-    background: linear-gradient(135deg, hsl(var(--gradient-pink)), hsl(var(--gradient-purple)));
-    bottom: 20%;
-    left: 30%;
-    animation-delay: -5s;
-  }
-
-  /* Section seamless transitions */
+  /* Section transition fades */
   .section-fade-top {
-    @apply absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none;
-    z-index: 1;
+    @apply absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background to-transparent pointer-events-none z-10;
   }
 
   .section-fade-bottom {
-    @apply absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none;
-    z-index: 1;
+    @apply absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-10;
   }
 }
 
 @layer utilities {
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .animate-float-delayed {
-    animation: float 6s ease-in-out infinite 2s;
-  }
-
-  .animate-pulse-glow {
-    animation: pulse-glow 3s ease-in-out infinite;
-  }
-
-  .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient-shift 8s ease infinite;
-  }
-
-  /* Scroll reveal animations */
+  /* Scroll reveal */
   .scroll-reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   }
-
   .scroll-reveal.revealed {
     opacity: 1;
     transform: translateY(0);
@@ -168,35 +126,21 @@
 
   .scroll-reveal-left {
     opacity: 0;
-    transform: translateX(-30px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateX(-24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   }
-
   .scroll-reveal-left.revealed {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .scroll-reveal-right {
-    opacity: 0;
-    transform: translateX(30px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .scroll-reveal-right.revealed {
     opacity: 1;
     transform: translateX(0);
   }
 
   .scroll-reveal-scale {
     opacity: 0;
-    transform: scale(0.95);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: scale(0.96);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   }
-
   .scroll-reveal-scale.revealed {
     opacity: 1;
     transform: scale(1);
@@ -211,53 +155,20 @@
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
 }
 
-@keyframes pulse-glow {
-  0%, 100% {
-    opacity: 0.6;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.02);
-  }
+@keyframes pulse-node {
+  0%, 100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.3); }
+  50% { box-shadow: 0 0 0 8px hsl(var(--primary) / 0); }
 }
 
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+@keyframes flow-line {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 40px; }
 }
 
-@keyframes orb-float {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-  25% {
-    transform: translate(30px, -20px) scale(1.05);
-  }
-  50% {
-    transform: translate(-20px, 20px) scale(0.95);
-  }
-  75% {
-    transform: translate(-30px, -10px) scale(1.02);
-  }
-}
-
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
