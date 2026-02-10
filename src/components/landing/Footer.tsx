@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border/20 pt-6">
-          <p className="text-muted-foreground text-sm">© {currentYear} Blukaze — Automation with human touch. All rights reserved.</p>
+          <p className="text-muted-foreground text-sm">© {currentYear} Blukaze. All rights reserved.</p>
         </div>
       </div>
     </footer>
