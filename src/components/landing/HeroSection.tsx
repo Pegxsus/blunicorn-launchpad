@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
 import useScrollReveal from "@/hooks/useScrollReveal";
-import heroImage from "@/assets/hero-lightning.png";
+import HeroLightning from "./HeroLightning";
 import BookCallDialog from "./BookCallDialog";
 
 const useCases = [
@@ -62,13 +62,7 @@ const HeroSection = () => {
 
             {/* Right — Hero Image */}
             <div className="hidden lg:flex justify-center items-center relative">
-              <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent rounded-full blur-3xl" />
-              <img
-                src={heroImage}
-                alt="AI Automation"
-                className="relative z-10 w-full max-w-md object-contain drop-shadow-2xl"
-                style={{ filter: 'drop-shadow(0 0 60px hsl(217 91% 60% / 0.3))' }}
-              />
+              <HeroLightning />
             </div>
           </div>
         </div>
