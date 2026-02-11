@@ -33,18 +33,18 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
-              size="lg"
-              className="rounded-full px-10 py-6 text-base group"
+              size="default"
+              className="rounded-full px-8 text-sm group"
               onClick={() => setIsBookCallOpen(true)}
             >
-              Book a Discovery Call
+              Book a Call
               <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </Button>
             <a href="#services">
               <Button
                 variant="outline"
-                size="lg"
-                className="rounded-full px-10 py-6 text-base border-border/60 hover:border-muted-foreground/40 text-foreground/80"
+                size="default"
+                className="rounded-full px-8 text-sm border-border/60 hover:border-muted-foreground/40 text-foreground/80"
               >
                 See What We Do
               </Button>
