@@ -59,11 +59,9 @@ const TestimonialsSection = () => {
           >
             <div className="grid md:grid-cols-[1fr_1.2fr] gap-0 rounded-2xl border border-border/40 bg-card/40 overflow-hidden min-h-[340px]">
               {/* Left: Avatar / visual area */}
-              <div className="relative bg-gradient-to-br from-primary/10 via-card to-card flex items-center justify-center p-10">
+              <div className="relative bg-gradient-to-br from-primary/10 via-card to-card flex items-center justify-center">
                 <div className="absolute inset-0 dot-grid opacity-20" />
-                <div className="relative z-10 w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary/30 to-primary/5 border-2 border-primary/20 overflow-hidden">
-                  <img src={active.image} alt={active.name} className="w-full h-full object-cover" />
-                </div>
+                <img src={active.image} alt={active.name} className="relative z-10 w-full h-full object-cover" />
               </div>
 
               {/* Right: Quote content */}
