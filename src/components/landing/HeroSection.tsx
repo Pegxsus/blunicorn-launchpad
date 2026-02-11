@@ -21,7 +21,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10 text-center" ref={ref}>
         <div className={`scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1] mb-8 tracking-tight text-foreground/80 max-w-4xl mx-auto">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-[1.15] mb-8 tracking-tight text-foreground/80 max-w-3xl mx-auto">
             Intelligent AI automation
             <br />
             <span className="gradient-text font-semibold">for growing businesses</span>
