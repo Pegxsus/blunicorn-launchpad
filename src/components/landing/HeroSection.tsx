@@ -21,14 +21,14 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10 text-center" ref={ref}>
         <div className={`scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-[1.15] mb-8 tracking-tight text-foreground/80 max-w-3xl mx-auto">
-            Intelligent AI automation
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.1] mb-8 tracking-tight text-foreground max-w-4xl mx-auto lowercase">
+            AI-native operations
             <br />
-            <span className="gradient-text font-semibold">for growing businesses</span>
+            <span className="text-muted-foreground">for teams tired of doing it manually</span>
           </h1>
 
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-12 leading-relaxed">
-            We audit your business, untangle operations, and install AI automations that remove bottlenecks and 10× your team's productivity.
+            Find the bottlenecks, cut the busywork, and ship 10× faster.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
