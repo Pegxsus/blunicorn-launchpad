@@ -21,10 +21,10 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10 text-center" ref={ref}>
         <div className={`scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.1] mb-8 tracking-tight text-foreground max-w-4xl mx-auto lowercase">
-            AI-native operations
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.1] mb-8 tracking-tight text-foreground max-w-4xl mx-auto">
+            <span className="normal-case">AI</span><span className="lowercase">-native operations</span>
             <br />
-            <span className="text-muted-foreground">for teams tired of doing it manually</span>
+            <span className="text-muted-foreground lowercase">for teams tired of doing it manually</span>
           </h1>
 
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-12 leading-relaxed">
