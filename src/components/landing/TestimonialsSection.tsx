@@ -16,7 +16,7 @@ const testimonials = [
   },
   {
     quote: "Their AI automation expertise is next level. We've cut manual data entry by 90% and our team finally focuses on strategy.",
-    fullQuote: "Their AI automation expertise is next level. We've cut manual data entry by 90% and our team finally focuses on strategy. The n8n workflows they built are robust, well-documented, and easy for our team to maintain. Blukaze didn't just automate — they transformed how we think about operations.",
+    fullQuote: "Their AI automation expertise is next level. We've cut manual data entry by 90% and our team finally focuses on strategy. The n8n workflows they built are robust, well-documented, and easy for our team to maintain. Blukaze didn't just automate  they transformed how we think about operations.",
     name: "James R.",
     role: "CEO, TECHFLOW",
     initials: "JR",
