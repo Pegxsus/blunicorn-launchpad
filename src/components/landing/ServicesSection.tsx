@@ -38,13 +38,13 @@ const ServicesSection = () => {
   const { ref, isRevealed } = useScrollReveal(0.1);
 
   return (
-    <section id="services" className="py-28 relative overflow-hidden">
+    <section id="services" className="py-16 relative overflow-hidden">
       <div className="section-fade-top" />
       <div className="section-fade-bottom" />
       <div className="absolute inset-0 dot-grid opacity-30" />
 
-      <div className="container mx-auto px-6 relative z-10" ref={ref}>
-        <div className={`text-center max-w-2xl mx-auto mb-16 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
+      <div className="container mx-auto px-10 md:px-16 lg:px-20 relative z-10" ref={ref}>
+        <div className={`text-center max-w-2xl mx-auto mb-12 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
           <p className="text-primary text-sm font-semibold tracking-wide uppercase mb-4">What we do</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-5 tracking-tight leading-tight">
             The fast way to actually
