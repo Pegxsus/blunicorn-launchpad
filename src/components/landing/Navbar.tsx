@@ -61,7 +61,7 @@ const Navbar = () => {
               className="rounded-full px-5"
               onClick={() => setIsBookCallOpen(true)}
             >
-              Get Started
+              Book a Call
             </Button>
           </div>
 
@@ -89,7 +89,7 @@ const Navbar = () => {
               <div className="flex flex-col gap-3 mt-2">
                 <a href="https://app.blukaze.com" className="text-sm text-muted-foreground">Sign in</a>
                 <Button size="sm" className="rounded-full" onClick={() => { setIsBookCallOpen(true); setIsOpen(false); }}>
-                  Get Started
+                  Book a Call
                 </Button>
               </div>
             </div>
