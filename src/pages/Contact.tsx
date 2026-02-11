@@ -1,10 +1,12 @@
 import { Mail } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import CursorGlow from "@/components/landing/CursorGlow";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <CursorGlow />
       <Navbar />
       
       {/* Contact Section */}
