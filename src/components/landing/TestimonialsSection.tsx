@@ -57,9 +57,9 @@ const TestimonialsSection = () => {
           <div
             className={`max-w-5xl mx-auto mb-8 scroll-reveal delay-200 ${isRevealed ? "revealed" : ""}`}
           >
-            <div className="grid md:grid-cols-[1fr_1.2fr] gap-0 rounded-2xl border border-border/40 bg-card/40 overflow-hidden min-h-[340px]">
+            <div className="grid md:grid-cols-[1fr_1.2fr] gap-0 rounded-2xl border border-border/40 bg-card/40 overflow-hidden">
               {/* Left: Avatar / visual area */}
-              <div className="relative bg-gradient-to-br from-primary/10 via-card to-card aspect-square md:aspect-auto md:min-h-[340px] overflow-hidden">
+              <div className="relative bg-gradient-to-br from-primary/10 via-card to-card h-[300px] md:h-[400px] overflow-hidden">
                 <div className="absolute inset-0 dot-grid opacity-20" />
                 <img src={active.image} alt={active.name} className="relative z-10 w-full h-full object-cover object-top" />
               </div>
