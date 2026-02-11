@@ -1,6 +1,9 @@
 import { useState } from "react";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import { Quote, ArrowRight } from "lucide-react";
+import sarahImg from "@/assets/testimonials/sarah-m.jpg";
+import jamesImg from "@/assets/testimonials/james-r.jpg";
+import priyaImg from "@/assets/testimonials/priya-k.jpg";
 
 const testimonials = [
   {
@@ -9,6 +12,7 @@ const testimonials = [
     name: "Sarah M.",
     role: "HEAD OF OPERATIONS",
     initials: "SM",
+    image: sarahImg,
   },
   {
     quote: "Their AI automation expertise is next level. We've cut manual data entry by 90% and our team finally focuses on strategy.",
@@ -16,6 +20,7 @@ const testimonials = [
     name: "James R.",
     role: "CEO, TECHFLOW",
     initials: "JR",
+    image: jamesImg,
   },
   {
     quote: "From discovery call to live automation in under a week. The ROI was immediate and the ongoing support is outstanding.",
@@ -23,6 +28,7 @@ const testimonials = [
     name: "Priya K.",
     role: "OPERATIONS MANAGER",
     initials: "PK",
+    image: priyaImg,
   },
 ];
 
@@ -55,10 +61,8 @@ const TestimonialsSection = () => {
               {/* Left: Avatar / visual area */}
               <div className="relative bg-gradient-to-br from-primary/10 via-card to-card flex items-center justify-center p-10">
                 <div className="absolute inset-0 dot-grid opacity-20" />
-                <div className="relative z-10 w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary/30 to-primary/5 border-2 border-primary/20 flex items-center justify-center">
-                  <span className="text-4xl md:text-5xl font-bold text-primary/80">
-                    {active.initials}
-                  </span>
+                <div className="relative z-10 w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary/30 to-primary/5 border-2 border-primary/20 overflow-hidden">
+                  <img src={active.image} alt={active.name} className="w-full h-full object-cover" />
                 </div>
               </div>
 
@@ -98,10 +102,8 @@ const TestimonialsSection = () => {
                   "{t.quote}"
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-xs font-semibold text-primary">
-                      {t.initials}
-                    </span>
+                  <div className="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 overflow-hidden flex-shrink-0">
+                    <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <p className="text-foreground font-semibold text-xs">
