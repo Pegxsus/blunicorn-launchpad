@@ -39,7 +39,6 @@ const FAQSection = () => {
 
   return (
     <section className="py-28 px-6 relative">
-      <div className="section-fade-top" />
 
       <div className="max-w-6xl mx-auto relative z-10" ref={ref}>
         <div className={`flex flex-col lg:flex-row gap-12 lg:gap-20 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
