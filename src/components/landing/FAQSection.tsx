@@ -10,27 +10,27 @@ const faqs = [
   {
     question: "What problems can your automations solve?",
     answer:
-      "We automate repetitive, error-prone, and time-consuming workflows—like lead handling, reporting, data syncing, AI analysis, notifications, and decision support—so your team can focus on high-value work.",
+      "We take the manual, repetitive stuff off your plate. Think lead routing, report generation, data syncing between tools, smart notifications, and AI-powered analysis. Basically, if your team is doing it over and over, we can probably automate it.",
   },
   {
     question: "Why do you use n8n instead of custom code?",
     answer:
-      "n8n lets us build production-grade, scalable automations faster and more transparently. You get visual workflows, easier maintenance, no vendor lock-in, and the ability to extend or modify logic anytime.",
+      "n8n gives us the best of both worlds: speed and flexibility. You get visual workflows that are easy to understand, maintain, and modify. No vendor lock-in, no black boxes. And when custom logic is needed, n8n supports that too.",
   },
   {
     question: "Can you handle complex business logic and AI workflows?",
     answer:
-      "Yes. We specialize in logic-heavy automations with conditions, branching, retries, approvals, and AI agents—designed with safeguards so AI outputs are reliable and controllable.",
+      "That's actually where we do our best work. We build automations with branching logic, conditional steps, retries, approval flows, and AI agents. Everything is designed with guardrails so outputs stay reliable and predictable.",
   },
   {
     question: "Is my data secure?",
     answer:
-      "Absolutely. We follow secure credential handling, minimal data access, and optional self-hosted n8n deployments so your data stays fully under your control.",
+      "100%. We use secure credential management, limit data access to only what's needed, and can set up self-hosted n8n instances if you want full control over where your data lives.",
   },
   {
     question: "How quickly can we get started?",
     answer:
-      "Most automations go live in days, not months. After understanding your use case, we share a clear scope, timeline, and deliver a working automation you can see and control.",
+      "Fast. Most projects go live within days. We'll hop on a quick call, understand your workflow, and deliver a working automation you can see and manage yourself.",
   },
 ];
 
