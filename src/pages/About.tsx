@@ -1,10 +1,12 @@
 import { Zap, Target, Users, Lightbulb } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import CursorGlow from "@/components/landing/CursorGlow";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <CursorGlow />
       <Navbar />
       
       {/* Hero Section */}
