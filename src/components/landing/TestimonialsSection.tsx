@@ -10,6 +10,7 @@ const testimonials = [
     quote: "Blukaze transformed our lead pipeline. What took our team 4 hours daily now runs on autopilot with zero errors.",
     fullQuote: "Blukaze transformed our lead pipeline. What took our team 4 hours daily now runs on autopilot with zero errors. The team was incredibly responsive and understood our business needs from day one. We've seen a 3x improvement in conversion rates since implementing their automation workflows.",
     name: "Sarah M.",
+    company: "Apollo",
     role: "HEAD OF OPERATIONS",
     initials: "SM",
     image: sarahImg,
@@ -71,13 +72,13 @@ const TestimonialsSection = () => {
                   "{active.fullQuote}"
                 </p>
                 <div>
-                  <p className="text-foreground font-semibold text-sm">
-                    {active.name}
-                  </p>
-                  <p className="text-muted-foreground text-xs tracking-wide uppercase">
-                    {active.role}
-                  </p>
-                </div>
+                   <p className="text-foreground font-semibold text-sm">
+                     {active.name}
+                   </p>
+                   <p className="text-muted-foreground text-xs tracking-wide uppercase">
+                     {active.company && `${active.company} • `}{active.role}
+                   </p>
+                 </div>
               </div>
             </div>
           </div>
@@ -103,14 +104,14 @@ const TestimonialsSection = () => {
                   <div className="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 overflow-hidden flex-shrink-0">
                     <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
                   </div>
-                  <div>
-                    <p className="text-foreground font-semibold text-xs">
-                      {t.name}
-                    </p>
-                    <p className="text-muted-foreground text-[10px] tracking-wide uppercase">
-                      {t.role}
-                    </p>
-                  </div>
+                   <div>
+                     <p className="text-foreground font-semibold text-xs">
+                       {t.name}
+                     </p>
+                     <p className="text-muted-foreground text-[10px] tracking-wide uppercase">
+                       {t.company && `${t.company} • `}{t.role}
+                     </p>
+                   </div>
                 </div>
               </button>
             ))}
