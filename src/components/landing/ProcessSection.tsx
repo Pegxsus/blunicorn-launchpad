@@ -47,7 +47,7 @@ const ProcessSection = () => {
       <div className="absolute inset-0 dot-grid opacity-20" />
       <div className="absolute bottom-0 left-1/4 w-[500px] h-[400px] rounded-full bg-primary/5 blur-[100px] pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10" ref={ref}>
+      <div className="container mx-auto px-6 md:px-16 lg:px-24 relative z-10" ref={ref}>
         <div className={`max-w-2xl mx-auto text-center mb-20 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-5 tracking-tight leading-tight">
             Get started in 3 simple steps.

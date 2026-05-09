@@ -46,9 +46,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
         <div className={`scroll-reveal ${isRevealed ? "revealed" : ""}`}>
           <div className="text-center mb-16">
-            <p className="text-primary text-sm font-semibold tracking-wide uppercase mb-4">
-              Testimonials
-            </p>
+
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
               What our clients say
             </h2>

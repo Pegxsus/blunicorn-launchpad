@@ -2,11 +2,13 @@ import { Mail } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import CursorGlow from "@/components/landing/CursorGlow";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <CursorGlow />
+      <SEO title="Contact Us" description="Get in touch with Blukaze to discuss your AI automation needs." />
       <Navbar />
       
       {/* Contact Section */}
@@ -39,7 +41,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer showCTA={false} />
     </div>
   );
 };

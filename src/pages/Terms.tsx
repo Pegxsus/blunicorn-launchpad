@@ -1,9 +1,11 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import SEO from "@/components/SEO";
 
 const Terms = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Terms of Service" description="Read the Terms of Service for Blukaze AI Automation Agency." />
       <Navbar />
       
       <main className="pt-32 pb-20 px-6 md:px-12 lg:px-20">

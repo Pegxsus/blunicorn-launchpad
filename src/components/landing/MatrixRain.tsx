@@ -23,7 +23,7 @@ const MatrixRain = () => {
     const drops: number[] = Array(columns).fill(0).map(() => Math.random() * -100);
 
     const draw = () => {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillStyle = "rgba(4, 5, 10, 0.08)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       for (let i = 0; i < drops.length; i++) {
@@ -31,25 +31,24 @@ const MatrixRain = () => {
         const x = i * fontSize;
         const y = drops[i] * fontSize;
 
-        // Vary brightness
         const brightness = Math.random();
-        if (brightness > 0.95) {
-          ctx.fillStyle = "hsl(217, 91%, 70%)";
+        if (brightness > 0.98) {
+          ctx.fillStyle = "rgba(255, 255, 255, 0.35)";
           ctx.font = `bold ${fontSize}px monospace`;
-        } else if (brightness > 0.8) {
-          ctx.fillStyle = "hsl(217, 60%, 45%)";
+        } else if (brightness > 0.9) {
+          ctx.fillStyle = "rgba(102, 187, 255, 0.2)";
           ctx.font = `${fontSize}px monospace`;
         } else {
-          ctx.fillStyle = "hsl(217, 40%, 25%)";
+          ctx.fillStyle = "rgba(102, 187, 255, 0.08)";
           ctx.font = `${fontSize}px monospace`;
         }
 
         ctx.fillText(char, x, y);
 
-        if (y > canvas.height && Math.random() > 0.975) {
+        if (y > canvas.height && Math.random() > 0.985) {
           drops[i] = 0;
         }
-        drops[i] += 0.5 + Math.random() * 0.5;
+        drops[i] += 0.4 + Math.random() * 0.4;
       }
     };
 

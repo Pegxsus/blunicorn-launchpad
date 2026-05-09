@@ -30,13 +30,10 @@ const N8NTemplatesSection = () => {
       <div className="section-fade-bottom" />
       <div className="absolute inset-0 dot-grid opacity-15" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 md:px-16 lg:px-24 relative z-10">
         <div ref={ref} className={`scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
           <div className="max-w-2xl mx-auto text-center mb-16">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <img src={n8nLogo} alt="n8n" className="h-5 w-5 rounded" />
-              <p className="text-primary text-sm font-semibold tracking-wide uppercase">Templates</p>
-            </div>
+
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-5 tracking-tight leading-tight">
               Jumpstart with
               <br />
@@ -47,16 +44,16 @@ const N8NTemplatesSection = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-10">
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
             {templates.map((template, index) => (
               <div
                 key={template.title}
-                className={`scroll-reveal delay-${(index + 1) * 100} ${isRevealed ? 'revealed' : ''} group p-6 rounded-2xl border border-border/40 bg-card/40 hover:border-primary/30 hover:bg-card/60 hover:-translate-y-1 transition-all duration-300 cursor-pointer text-center`}
+                className={`scroll-reveal delay-${(index + 1) * 100} ${isRevealed ? 'revealed' : ''} group p-8 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-md transition-all duration-300 cursor-pointer text-left`}
               >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/15 group-hover:scale-110 transition-all duration-300">
+                <div className="w-10 h-10 rounded bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-all duration-300">
                   <template.icon className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="text-base font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{template.title}</h3>
+                <h3 className="text-lg font-bold mb-3 text-foreground">{template.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {template.description}
                 </p>
