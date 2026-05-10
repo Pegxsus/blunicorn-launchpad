@@ -13,6 +13,7 @@ import Privacy from "./pages/Privacy";
 import Works from "./pages/Works";
 import WorkDetail from "./pages/WorkDetail";
 import ServiceDetail from "./pages/ServiceDetail";
+import PostCheckout from "./pages/PostCheckout";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/works" element={<Works />} />
           <Route path="/works/:slug" element={<WorkDetail />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="/post-checkout" element={<PostCheckout />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
