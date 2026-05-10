@@ -2,7 +2,7 @@ import Navbar from "@/components/landing/Navbar";
 import HeroSection from "@/components/landing/HeroSection";
 import ToolsMarqueeSection from "@/components/landing/ToolsMarqueeSection";
 import CursorGlow from "@/components/landing/CursorGlow";
-import SocialProofSection from "@/components/landing/SocialProofSection";
+
 import ServicesSection from "@/components/landing/ServicesSection";
 import WorksSection from "@/components/landing/WorksSection";
 import ProcessSection from "@/components/landing/ProcessSection";
@@ -26,7 +26,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <ToolsMarqueeSection />
-        <SocialProofSection />
+
         <ServicesSection />
         <WorksSection />
         <ProcessSection />
