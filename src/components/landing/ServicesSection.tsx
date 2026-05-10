@@ -30,24 +30,24 @@ const ServicesSection = () => {
   const headerInView = useInView(headerRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="services" className="py-32 md:py-48 bg-[#050510] relative overflow-hidden">
+    <section id="services" className="py-20 md:py-32 lg:py-48 bg-[#050510] relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-700/5 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[130px] pointer-events-none" />
 
-      <div className="container mx-auto px-6 lg:px-12" ref={headerRef}>
+      <div className="container mx-auto px-5 sm:px-6 lg:px-12" ref={headerRef}>
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-24 border-b border-white/5 pb-16">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-16 md:mb-24 border-b border-white/5 pb-10 md:pb-16">
           <div>
             <div className="overflow-hidden">
               <motion.h2
                 initial={{ y: "100%" }}
                 animate={headerInView ? { y: 0 } : {}}
                 transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                className="text-[clamp(3rem,8vw,7rem)] font-black uppercase tracking-tighter leading-[0.9] text-white"
+                className="text-[clamp(2.5rem,7vw,7rem)] font-black uppercase tracking-tighter leading-[0.9] text-white"
               >
-                SIMPLICITY
+                What We
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-400 to-blue-600">THROUGH DESIGN.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500">Build.</span>
               </motion.h2>
             </div>
           </div>

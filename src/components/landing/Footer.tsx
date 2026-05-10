@@ -29,12 +29,12 @@ const Footer = ({ showCTA = true }: { showCTA?: boolean }) => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <footer className="bg-[#030308] border-t border-white/5 pt-32 pb-12 overflow-hidden" ref={ref}>
-      <div className="container mx-auto px-6 lg:px-12">
+    <footer className="bg-[#030308] border-t border-white/5 pt-20 md:pt-32 pb-12 overflow-hidden" ref={ref}>
+      <div className="container mx-auto px-5 sm:px-6 lg:px-12">
 
         {/* Massive CTA — WAC Signature */}
         {showCTA && (
-          <div className="border-b border-white/5 pb-24 mb-20">
+          <div className="border-b border-white/5 pb-16 md:pb-24 mb-14 md:mb-20">
             <motion.p
               initial={{ opacity: 0, x: -20 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -51,7 +51,7 @@ const Footer = ({ showCTA = true }: { showCTA?: boolean }) => {
                     initial={{ y: "100%" }}
                     animate={isInView ? { y: 0 } : {}}
                     transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                    className="text-[clamp(3.5rem,10vw,9rem)] font-black uppercase tracking-tighter leading-[0.82] text-white"
+                    className="text-[clamp(2.5rem,8vw,9rem)] font-black uppercase tracking-tighter leading-[0.85] text-white"
                   >
                     Let's Build
                   </motion.h2>
@@ -61,7 +61,7 @@ const Footer = ({ showCTA = true }: { showCTA?: boolean }) => {
                     initial={{ y: "100%" }}
                     animate={isInView ? { y: 0 } : {}}
                     transition={{ duration: 1, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-                    className="text-[clamp(3.5rem,10vw,9rem)] font-black uppercase tracking-tighter leading-[0.82] magic-text"
+                    className="text-[clamp(2.5rem,8vw,9rem)] font-black uppercase tracking-tighter leading-[0.85] magic-text"
                   >
                     Together.
                   </motion.h2>
