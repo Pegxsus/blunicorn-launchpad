@@ -51,7 +51,7 @@ const Footer = ({ showCTA = true }: { showCTA?: boolean }) => {
                     initial={{ y: "100%" }}
                     animate={isInView ? { y: 0 } : {}}
                     transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                    className="text-[clamp(2.5rem,8vw,9rem)] font-black uppercase tracking-tighter leading-[0.85] text-white"
+                    className="text-[clamp(2.5rem,8vw,9rem)] font-black uppercase tracking-tighter leading-[0.85] text-white pr-4"
                   >
                     Let's Build
                   </motion.h2>
@@ -61,7 +61,7 @@ const Footer = ({ showCTA = true }: { showCTA?: boolean }) => {
                     initial={{ y: "100%" }}
                     animate={isInView ? { y: 0 } : {}}
                     transition={{ duration: 1, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-                    className="text-[clamp(2.5rem,8vw,9rem)] font-black uppercase tracking-tighter leading-[0.85] magic-text"
+                    className="text-[clamp(2.5rem,8vw,9rem)] font-black uppercase tracking-tighter leading-[0.85] magic-text pr-4"
                   >
                     Together.
                   </motion.h2>
@@ -97,7 +97,7 @@ const Footer = ({ showCTA = true }: { showCTA?: boolean }) => {
               <div className="w-14 h-14 flex items-center justify-center">
                 <img src={logo} alt="Blukaze" className="w-full h-full object-contain brightness-0 invert" />
               </div>
-              <span className="text-2xl font-black text-white">Blukaze</span>
+              <span className="text-2xl font-semibold text-white">Blukaze</span>
             </Link>
             <p className="text-sm text-white/30 leading-relaxed max-w-xs mb-8">
               Automation with a human touch.
@@ -124,7 +124,7 @@ const Footer = ({ showCTA = true }: { showCTA?: boolean }) => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-white/5">
           <p className="text-[11px] font-bold text-white/20 uppercase tracking-widest w-full text-center md:text-left">
-            © 2026 Blukaze. All rights reserved. Architecting the era of intelligence.
+            © 2026 Blukaze. All rights reserved. Automation with a human touch.
           </p>
         </div>
       </div>

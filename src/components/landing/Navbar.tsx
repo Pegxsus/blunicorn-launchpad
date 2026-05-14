@@ -52,11 +52,11 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-14 h-14 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+          <Link to="/" className="flex items-center gap-3 group relative z-50">
+            <div className="w-10 h-10 flex items-center justify-center">
               <img src={logo} alt="Blukaze" className="w-full h-full object-contain brightness-0 invert" />
             </div>
-            <span className="text-2xl font-black tracking-tight text-white">Blukaze</span>
+            <span className="text-2xl font-semibold tracking-tight text-white">Blukaze</span>
           </Link>
 
           {/* Desktop Links */}
@@ -105,7 +105,7 @@ const Navbar = () => {
             className="fixed inset-0 z-50 bg-[#050510] flex flex-col p-10"
           >
             <div className="flex items-center justify-between mb-16">
-              <span className="text-2xl font-black text-white">Blukaze</span>
+              <span className="text-2xl font-semibold text-white">Blukaze</span>
               <button onClick={() => setIsOpen(false)} className="text-white"><X size={28} /></button>
             </div>
             <div className="flex flex-col gap-8">

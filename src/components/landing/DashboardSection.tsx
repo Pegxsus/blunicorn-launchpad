@@ -57,7 +57,7 @@ const DashboardSection = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-bold font-heading mb-6"
           >
-            Your Personal <span className="text-primary">Launchpad</span>
+            Your Personal <span className="magic-text">Launchpad</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
