@@ -44,13 +44,13 @@ const Navbar = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 h-20 flex items-center transition-all duration-500 ${
+        className={`fixed z-50 left-0 right-0 mx-auto transition-all duration-700 ease-in-out flex items-center ${
           isScrolled
-            ? "bg-[#050510]/90 backdrop-blur-xl border-b border-white/[0.06]"
-            : "bg-transparent"
+            ? "top-4 w-[calc(100%-2rem)] max-w-6xl h-16 bg-[#050510]/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl"
+            : "top-0 w-full max-w-none h-20 bg-transparent border-b border-transparent rounded-none"
         }`}
       >
-        <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
+        <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between w-full transition-all duration-700">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group relative z-50">
             <div className="w-10 h-10 flex items-center justify-center">
