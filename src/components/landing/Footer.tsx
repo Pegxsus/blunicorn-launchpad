@@ -29,8 +29,16 @@ const Footer = ({ showCTA = true }: { showCTA?: boolean }) => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <footer className="bg-[#030308] border-t border-white/5 pt-20 md:pt-32 pb-12 overflow-hidden" ref={ref}>
-      <div className="container mx-auto px-5 sm:px-6 lg:px-12">
+    <footer className="bg-[#030308] border-t border-white/5 pt-20 md:pt-32 pb-12 overflow-hidden relative z-0" ref={ref}>
+      {/* Bottom Ambient Blue Glow */}
+      <div 
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[150%] sm:w-[120%] max-w-[1920px] h-[400px] md:h-[600px] pointer-events-none -z-10" 
+        style={{ 
+          background: 'radial-gradient(ellipse 80% 100% at 50% 100%, rgba(37, 99, 235, 0.4) 0%, rgba(30, 58, 138, 0.15) 40%, rgba(3, 3, 8, 0) 100%)' 
+        }} 
+      />
+      
+      <div className="container mx-auto px-5 sm:px-6 lg:px-12 relative z-10">
 
         {/* Massive CTA — WAC Signature */}
         {showCTA && (
