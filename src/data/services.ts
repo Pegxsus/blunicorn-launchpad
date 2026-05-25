@@ -6,9 +6,9 @@ import serviceAudit from "@/assets/service-audit.png";
 export const services = [
   {
     slug: "ai-automation",
-    title: "AI Automation",
+    title: "Agentic Workflow Engineering",
     subtitle: "Turn Manual Chaos Into Intelligent Workflows",
-    description: "We architect intelligent AI pipelines that replace repetitive manual tasks with autonomous systems. From smart lead qualification to automated data entry and customer support routing, we build custom n8n and Make.com workflows powered by LLMs to scale your operations effortlessly.",
+    description: "Developing self-hosted, headless workflow environments that act as customized, deployable tools and sub-agents for your core LLM architecture.",
     image: serviceAi,
     howWeHelp: [
       {
@@ -28,9 +28,9 @@ export const services = [
   },
   {
     slug: "web-scrapers",
-    title: "Web Scrapers",
+    title: "Agent Data Pipelines & RAG",
     subtitle: "Extract High-Value Data at Scale",
-    description: "We build robust, anti-detect web scrapers and crawlers that navigate complex websites, bypass captchas, and extract precise data. Whether you need competitor pricing, lead generation, or LLM training data, our scrapers deliver clean, structured datasets in real-time.",
+    description: "Building low-latency data retrieval systems and vector architectures to give your agents real-time, accurate context from the open web and proprietary sources.",
     image: serviceScraper,
     howWeHelp: [
       {
@@ -50,9 +50,9 @@ export const services = [
   },
   {
     slug: "backend-development",
-    title: "Backend Development",
+    title: "Machine-Readable APIs & MCPs",
     subtitle: "Scalable Infrastructure for Your Apps",
-    description: "We engineer high-performance, secure, and scalable backend systems to power your digital products. From microservices architecture and API development to database optimization, we ensure your technical foundation can handle extreme loads without breaking a sweat.",
+    description: "Translating legacy, human-first software into strictly typed, fully documented REST/GraphQL APIs and Model Context Protocols for instant agent integration.",
     image: serviceBackend,
     howWeHelp: [
       {
@@ -72,9 +72,9 @@ export const services = [
   },
   {
     slug: "business-audit",
-    title: "Business Audit",
+    title: "Agent-Ready Architecture Audit",
     subtitle: "Identify Bottlenecks. Unlock Growth.",
-    description: "Before automating, we diagnose. Our comprehensive business and technical audits dive deep into your operations, software stack, and workflows to identify inefficiencies, cost drains, and opportunities for massive AI-driven ROI.",
+    description: "A technical teardown of your current software stack to identify UI bottlenecks and blueprint the necessary machine-to-machine infrastructure required for autonomous agent deployment.",
     image: serviceAudit,
     howWeHelp: [
       {

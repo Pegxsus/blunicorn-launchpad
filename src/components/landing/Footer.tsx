@@ -131,9 +131,6 @@ const Footer = ({ showCTA = true }: { showCTA?: boolean }) => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-white/5">
-          <p className="text-[11px] font-bold text-white/20 uppercase tracking-widest w-full text-center md:text-left">
-            © 2026 Blukaze. All rights reserved. Automation with a human touch.
-          </p>
         </div>
       </div>
     </footer>

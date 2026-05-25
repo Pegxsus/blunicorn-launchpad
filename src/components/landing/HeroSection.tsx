@@ -14,9 +14,9 @@ const fadeUp = (delay = 0) => ({
 });
 
 const stats = [
-  { figure: "50+", label: "Automations Shipped" },
-  { figure: "10K+", label: "Hours Saved" },
-  { figure: "30+", label: "Clients Served" },
+  { figure: "50+", label: "Custom MCPs Built" },
+  { figure: "10M+", label: "API Calls Processed" },
+  { figure: "500M+", label: "Tasks Executed Autonomously" },
 ];
 
 const HeroSection = () => {
@@ -52,20 +52,19 @@ const HeroSection = () => {
           {...fadeUp(0.08)}
           className="max-w-[900px] text-[clamp(2.25rem,7.5vw,5.5rem)] font-black tracking-[-0.04em] leading-[1.05] text-white mb-5 md:mb-6"
         >
-          Workflows that run
+          We build the hands
           <br className="hidden sm:block" />{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-blue-500">
-            your business for you.
+            for your AI Agents.
           </span>
         </motion.h1>
 
         {/* Sub-headline — one crisp line */}
         <motion.p
           {...fadeUp(0.16)}
-          className="max-w-lg text-[15px] sm:text-base md:text-lg text-white/40 leading-relaxed mb-8 md:mb-10 font-medium"
+          className="max-w-2xl text-[15px] sm:text-base md:text-lg text-white/40 leading-relaxed mb-8 md:mb-10 font-medium"
         >
-          We design, build, and ship production-grade automations
-          so your team focuses on what actually matters.
+          We engineer machine-readable APIs, Model Context Protocols, and headless workflows to transition your legacy software into an agent-first environment.
         </motion.p>
 
         {/* CTAs */}

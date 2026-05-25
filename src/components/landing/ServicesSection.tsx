@@ -5,12 +5,10 @@ import { Network, Zap, GitMerge, Globe, Server, LineChart } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
-  { number: "01", slug: "ai-automation", title: "n8n AI Automation", description: "Self-hosted, highly custom node-based automations linking your entire data stack seamlessly.", icon: Network, color: "blue" },
-  { number: "02", slug: "ai-automation", title: "Zapier Automation", description: "Rapid, reliable workflow automation connecting thousands of popular business apps instantly.", icon: Zap, color: "purple" },
-  { number: "03", slug: "ai-automation", title: "Make.com AI Workflows", description: "Visual, highly complex integration workflows that trigger intelligent AI agent processes.", icon: GitMerge, color: "blue" },
-  { number: "04", slug: "web-scrapers", title: "Web Scrapers", description: "Custom scraping architecture to extract competitive intel, product data, and leads at scale.", icon: Globe, color: "purple" },
-  { number: "05", slug: "backend-development", title: "Backend Development", description: "Robust server-side logic, custom API development, and secure database architecture.", icon: Server, color: "blue" },
-  { number: "06", slug: "business-audit", title: "AI Audit in Business", description: "Comprehensive analysis of your operations to identify high-ROI automation and AI opportunities.", icon: LineChart, color: "purple" },
+  { number: "01", slug: "ai-automation", title: "Agentic Workflow Engineering", description: "Developing self-hosted, headless workflow environments that act as customized, deployable tools and sub-agents for your core LLM architecture.", icon: Network, color: "blue" },
+  { number: "02", slug: "web-scrapers", title: "Agent Data Pipelines & RAG", description: "Building low-latency data retrieval systems and vector architectures to give your agents real-time, accurate context from the open web and proprietary sources.", icon: Globe, color: "purple" },
+  { number: "03", slug: "backend-development", title: "Machine-Readable APIs & MCPs", description: "Translating legacy, human-first software into strictly typed, fully documented REST/GraphQL APIs and Model Context Protocols for instant agent integration.", icon: Server, color: "blue" },
+  { number: "04", slug: "business-audit", title: "Agent-Ready Architecture Audit", description: "A technical teardown of your current software stack to identify UI bottlenecks and blueprint the necessary machine-to-machine infrastructure required for autonomous agent deployment.", icon: LineChart, color: "purple" },
 ];
 
 const cardVariants = {
@@ -54,7 +52,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Service Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5" ref={ref}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-px bg-white/5 border border-white/5" ref={ref}>
           {services.map((service, i) => (
             <Link to={`/services/${service.slug}`} key={service.number} className="block">
               <motion.div
