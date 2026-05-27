@@ -16,7 +16,7 @@ const fadeUp = (delay = 0) => ({
 const stats = [
   { figure: "30+", label: "Production Workflows Shipped" },
   { figure: "100%", label: "Type-Safe Executions" },
-  { figure: "Open Source", label: "Core Framework Native" },
+  { figure: "99.99%", label: "Uptime" },
 ];
 
 const HeroSection = () => {
