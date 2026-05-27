@@ -14,9 +14,9 @@ const fadeUp = (delay = 0) => ({
 });
 
 const stats = [
-  { figure: "50+", label: "Custom MCPs Built" },
-  { figure: "10M+", label: "API Calls Processed" },
-  { figure: "500M+", label: "Tasks Executed Autonomously" },
+  { figure: "30+", label: "Production Workflows Shipped" },
+  { figure: "100%", label: "Type-Safe Executions" },
+  { figure: "Open Source", label: "Core Framework Native" },
 ];
 
 const HeroSection = () => {
