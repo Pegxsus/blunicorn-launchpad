@@ -7,10 +7,11 @@ import logo from "@/assets/logo.png";
 import BookCallDialog from "./BookCallDialog";
 
 const navLinks = [
-  { name: "Services", href: "#services" },
-  { name: "Works", href: "/works", isPage: true },
-  { name: "Process", href: "#process" },
-  { name: "Contact", href: "/contact", isPage: true },
+  { name: "Solutions", href: "#solutions" },
+  { name: "Industries", href: "#what-we-automate" },
+  { name: "Case Studies", href: "/works", isPage: true },
+  { name: "Templates", href: "#templates" },
+  { name: "About", href: "/about", isPage: true },
 ];
 
 const Navbar = () => {
@@ -60,14 +61,14 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) =>
               link.isPage ? (
-                <Link key={link.name} to={link.href} className="text-sm font-semibold text-white/50 hover:text-white transition-colors">
+                <Link key={link.name} to={link.href} className="text-sm font-semibold text-white/60 hover:text-white transition-colors">
                   {link.name}
                 </Link>
               ) : (
-                <a key={link.name} href={link.href} onClick={(e) => handleAnchorClick(e, link.href)} className="text-sm font-semibold text-white/50 hover:text-white transition-colors">
+                <a key={link.name} href={link.href} onClick={(e) => handleAnchorClick(e, link.href)} className="text-sm font-semibold text-white/60 hover:text-white transition-colors">
                   {link.name}
                 </a>
               )
@@ -76,19 +77,19 @@ const Navbar = () => {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-6">
-            <a href="https://app.blukaze.com" className="text-sm font-bold text-white/50 hover:text-white transition-colors">
+            <a href="https://app.blukaze.com" className="text-sm font-bold text-white/60 hover:text-white transition-colors">
               Login
             </a>
             <Button
               onClick={() => setIsBookCallOpen(true)}
-              className="rounded-full px-8 h-12 font-bold text-sm bg-blue-600 hover:bg-blue-500 hover:scale-[1.03] transition-all border-none shadow-lg shadow-blue-600/20"
+              className="rounded-full px-6 h-11 font-bold text-xs bg-blue-600 hover:bg-blue-500 hover:scale-[1.03] transition-all border-none shadow-lg shadow-blue-600/20"
             >
-              Book a Free Call
+              Get Free Automation Audit
             </Button>
           </div>
 
           {/* Hamburger */}
-          <button className="lg:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+          <button className="lg:hidden text-white p-2" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -102,13 +103,13 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-50 bg-[#050510] flex flex-col p-10"
+            className="fixed inset-0 z-50 bg-[#050510] flex flex-col p-8 overflow-y-auto"
           >
-            <div className="flex items-center justify-between mb-16">
+            <div className="flex items-center justify-between mb-12">
               <span className="text-2xl font-semibold text-white">Blukaze</span>
-              <button onClick={() => setIsOpen(false)} className="text-white"><X size={28} /></button>
+              <button onClick={() => setIsOpen(false)} className="text-white p-2"><X size={28} /></button>
             </div>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-6">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.name}
@@ -117,30 +118,30 @@ const Navbar = () => {
                   transition={{ delay: i * 0.07 + 0.1 }}
                 >
                   {link.isPage ? (
-                    <Link to={link.href} className="text-5xl font-black text-white hover:text-blue-600 transition-colors" onClick={() => setIsOpen(false)}>
+                    <Link to={link.href} className="text-3xl font-black text-white hover:text-blue-500 transition-colors" onClick={() => setIsOpen(false)}>
                       {link.name}
                     </Link>
                   ) : (
-                    <a href={link.href} className="text-5xl font-black text-white hover:text-blue-600 transition-colors" onClick={() => setIsOpen(false)}>
+                    <a href={link.href} className="text-3xl font-black text-white hover:text-blue-500 transition-colors" onClick={(e) => { setIsOpen(false); handleAnchorClick(e, link.href); }}>
                       {link.name}
                     </a>
                   )}
                 </motion.div>
               ))}
             </div>
-            <div className="mt-auto space-y-4">
+            <div className="mt-auto pt-10 space-y-4">
               <a 
                 href="https://app.blukaze.com" 
                 onClick={() => setIsOpen(false)} 
-                className="block text-center text-white/50 font-bold hover:text-white transition-colors py-2"
+                className="block text-center text-white/60 font-bold hover:text-white transition-colors py-2 text-sm"
               >
                 Login
               </a>
               <Button
-                className="w-full h-16 text-lg font-bold rounded-full bg-blue-600 hover:bg-blue-500"
+                className="w-full h-14 text-sm font-bold rounded-full bg-blue-600 hover:bg-blue-500 shadow-lg shadow-blue-600/30"
                 onClick={() => { setIsBookCallOpen(true); setIsOpen(false); }}
               >
-                Book a Free Call
+                Get Free Automation Audit
               </Button>
             </div>
           </motion.div>

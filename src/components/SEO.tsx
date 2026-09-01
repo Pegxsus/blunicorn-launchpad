@@ -8,7 +8,9 @@ interface SEOProps {
 
 const SEO = ({ title, description, keywords }: SEOProps) => {
   useEffect(() => {
-    document.title = `${title} | Blukaze AI Automation`;
+    document.title = title.includes("Blukaze") 
+      ? title 
+      : `${title} | Blukaze | AI Automation & Business Process Automation`;
     
     if (description) {
       const metaDescription = document.querySelector('meta[name="description"]');

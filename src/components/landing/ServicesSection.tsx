@@ -1,22 +1,62 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Network, Zap, GitMerge, Globe, Server, LineChart } from "lucide-react";
-
+import { Network, Cpu, Server, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const services = [
-  { number: "01", slug: "ai-automation", title: "Agentic Workflow Engineering", description: "Developing self-hosted, headless workflow environments that act as customized, deployable tools and sub-agents for your core LLM architecture.", icon: Network, color: "blue" },
-  { number: "02", slug: "web-scrapers", title: "Agent Data Pipelines & RAG", description: "Building low-latency data retrieval systems and vector architectures to give your agents real-time, accurate context from the open web and proprietary sources.", icon: Globe, color: "purple" },
-  { number: "03", slug: "backend-development", title: "Machine-Readable APIs & MCPs", description: "Translating legacy, human-first software into strictly typed, fully documented REST/GraphQL APIs and Model Context Protocols for instant agent integration.", icon: Server, color: "blue" },
-  { number: "04", slug: "business-audit", title: "Agent-Ready Architecture Audit", description: "A technical teardown of your current software stack to identify UI bottlenecks and blueprint the necessary machine-to-machine infrastructure required for autonomous agent deployment.", icon: LineChart, color: "purple" },
+const pillars = [
+  {
+    number: "01",
+    slug: "ai-automation",
+    title: "AI Automation",
+    subtitle: "Intelligent workflows that execute repetitive business processes automatically.",
+    examples: [
+      "Lead qualification",
+      "AI research",
+      "Content workflows",
+      "Customer support",
+      "Data processing",
+    ],
+    icon: Network,
+    color: "blue",
+  },
+  {
+    number: "02",
+    slug: "web-scrapers",
+    title: "AI Agents & RAG",
+    subtitle: "AI systems that can reason over your data, use tools and execute real tasks.",
+    examples: [
+      "AI agents",
+      "RAG systems",
+      "Knowledge assistants",
+      "Tool-calling systems",
+      "Human-in-the-loop workflows",
+    ],
+    icon: Cpu,
+    color: "purple",
+  },
+  {
+    number: "03",
+    slug: "backend-development",
+    title: "Integrations & Agent Infrastructure",
+    subtitle: "Connect your existing software and make your systems AI-ready.",
+    examples: [
+      "APIs & Webhooks",
+      "MCP servers",
+      "n8n production flows",
+      "CRM & DB integrations",
+      "Custom headless infrastructure",
+    ],
+    icon: Server,
+    color: "indigo",
+  },
 ];
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 40 },
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
   }),
 };
 
@@ -24,67 +64,81 @@ const ServicesSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const headerRef = useRef(null);
-  const headerInView = useInView(headerRef, { once: true, margin: "-80px" });
-
   return (
-    <section id="services" className="py-20 md:py-32 lg:py-48 bg-[#050510] relative overflow-hidden">
+    <section id="solutions" className="py-24 md:py-32 lg:py-40 bg-[#050510] relative overflow-hidden border-b border-white/5">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-700/5 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[130px] pointer-events-none" />
 
-      <div className="container mx-auto px-5 sm:px-6 lg:px-12" ref={headerRef}>
+      <div className="container mx-auto px-5 sm:px-6 lg:px-12">
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-16 md:mb-24 border-b border-white/5 pb-10 md:pb-16">
-          <div>
-            <div className="overflow-hidden">
-              <motion.h2
-                initial={{ y: "100%" }}
-                animate={headerInView ? { y: 0 } : {}}
-                transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                className="text-[clamp(2.5rem,7vw,7rem)] font-black uppercase tracking-tighter leading-[0.9] text-white"
-              >
-                What We
-                <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500">Build.</span>
-              </motion.h2>
-            </div>
-          </div>
+        <div className="max-w-3xl mb-16 md:mb-20">
+          <span className="text-xs font-black uppercase tracking-[0.3em] text-blue-400 mb-4 block">
+            Core Architecture
+          </span>
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white mb-6">
+            Automation engineered for{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500">
+              production.
+            </span>
+          </h2>
+          <p className="text-base text-white/50">
+            We build robust, scalable business infrastructure using modern AI and workflow engineering.
+          </p>
         </div>
 
-        {/* Service Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-px bg-white/5 border border-white/5" ref={ref}>
-          {services.map((service, i) => (
-            <Link to={`/services/${service.slug}`} key={service.number} className="block">
+        {/* 3 Pillar Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6" ref={ref}>
+          {pillars.map((pillar, i) => {
+            const Icon = pillar.icon;
+            return (
               <motion.div
+                key={pillar.number}
                 custom={i}
                 variants={cardVariants}
                 initial="hidden"
                 animate={isInView ? "show" : "hidden"}
-                className={`group p-10 h-full relative overflow-hidden cursor-pointer transition-colors duration-500 bg-[#050510] ${
-                  service.color === "blue" ? "hover:bg-[#0a0d17]" : "hover:bg-[#110e1b]"
-                }`}
+                className="group p-8 md:p-10 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/20 hover:bg-white/[0.04] transition-all duration-500 flex flex-col justify-between relative overflow-hidden"
               >
-                <div className="relative z-10 h-full flex flex-col">
-                  <div className="flex items-start justify-between mb-16">
-                    <span className="text-7xl font-black text-white/[0.03] tracking-tighter leading-none group-hover:text-white/[0.08] transition-colors">
-                      {service.number}
+                <div>
+                  <div className="flex items-start justify-between mb-8">
+                    <span className="text-5xl font-black text-white/10 tracking-tighter">
+                      {pillar.number}
                     </span>
-                    <div className={`w-10 h-10 rounded-xl ${service.color === "blue" ? "bg-blue-500/10" : "bg-purple-500/10"} flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6`}>
-                      <service.icon className={`w-5 h-5 ${service.color === "blue" ? "text-blue-400 group-hover:text-blue-300" : "text-purple-400 group-hover:text-purple-300"} transition-colors`} />
+                    <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Icon className="w-6 h-6 text-blue-400" />
                     </div>
                   </div>
-                  
-                  <div className="mt-auto">
-                    <h3 className="text-xl font-black uppercase tracking-tight text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/50 transition-all">{service.title}</h3>
-                    <p className="text-sm text-white/40 leading-relaxed group-hover:text-white/60 transition-colors">{service.description}</p>
-                  </div>
 
-                  {/* Bottom accent */}
-                  <div className={`absolute bottom-0 left-0 h-[1px] w-full transition-opacity duration-700 opacity-0 group-hover:opacity-100 bg-gradient-to-r ${service.color === "blue" ? "from-transparent via-blue-500 to-transparent" : "from-transparent via-purple-500 to-transparent"}`} />
+                  <h3 className="text-2xl font-black text-white mb-3">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-sm text-white/60 leading-relaxed mb-8">
+                    {pillar.subtitle}
+                  </p>
+
+                  {/* Examples */}
+                  <div className="space-y-2 mb-8">
+                    <p className="text-[11px] font-bold text-white/30 uppercase tracking-widest mb-3">
+                      SYSTEM EXAMPLES
+                    </p>
+                    {pillar.examples.map((ex) => (
+                      <div key={ex} className="flex items-center gap-2 text-xs text-white/70">
+                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400" />
+                        <span>{ex}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
+
+                <Link
+                  to={`/services/${pillar.slug}`}
+                  className="inline-flex items-center gap-2 text-xs font-bold text-blue-400 group-hover:text-blue-300 transition-colors pt-4 border-t border-white/5"
+                >
+                  Explore Capabilities <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
               </motion.div>
-            </Link>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -8,29 +8,48 @@ import useScrollReveal from "@/hooks/useScrollReveal";
 
 const faqs = [
   {
-    question: "What problems can your automations solve?",
-    answer:
-      "We take the manual, repetitive stuff off your plate. Think lead routing, report generation, data syncing between tools, smart notifications, and AI-powered analysis. Basically, if your team is doing it over and over, we can probably automate it.",
+    question: "What problems can Blukaze automate?",
+    answer: "We turn repetitive business operations into automated systems — including lead qualification, lead enrichment, CRM syncing, document parsing, customer support, email outreach, ETL pipelines, and internal knowledge retrieval.",
   },
   {
-    question: "Why do you use n8n instead of custom code?",
-    answer:
-      "n8n gives us the best of both worlds: speed and flexibility. You get visual workflows that are easy to understand, maintain, and modify. No vendor lock-in, no black boxes. And when custom logic is needed, n8n supports that too.",
+    question: "Do I need to replace my existing software?",
+    answer: "No. We build directly around your existing software stack (HubSpot, Salesforce, Airtable, Shopify, Slack, PostgreSQL, etc.) using APIs, webhooks, and n8n without forcing unnecessary tool replacements.",
   },
   {
-    question: "Can you handle complex business logic and AI workflows?",
-    answer:
-      "That's actually where we do our best work. We build automations with branching logic, conditional steps, retries, approval flows, and AI agents. Everything is designed with guardrails so outputs stay reliable and predictable.",
+    question: "Why use n8n?",
+    answer: "n8n provides the ideal balance of visual workflow clarity, high performance, and total flexibility. You get readable, maintainable execution flows without vendor lock-in, plus full support for custom JavaScript/Python code and self-hosting.",
   },
   {
-    question: "Is my data secure?",
-    answer:
-      "100%. We use secure credential management, limit data access to only what's needed, and can set up self-hosted n8n instances if you want full control over where your data lives.",
+    question: "Can you build custom AI agents?",
+    answer: "Yes. We build multi-step autonomous agents and tool-calling systems using frameworks like LangChain, AutoGen, and OpenAI APIs that can reason over your data, call APIs, and execute complex multi-step workflows.",
   },
   {
-    question: "How quickly can we get started?",
-    answer:
-      "Fast. Most projects go live within days. We'll hop on a quick call, understand your workflow, and deliver a working automation you can see and manage yourself.",
+    question: "Can you integrate with our CRM?",
+    answer: "Absolutely. We routinely build custom integrations for HubSpot, Salesforce, Close, Pipedrive, Zoho, and Airtable for real-time contact creation, deal stage updates, and automated rep assignment.",
+  },
+  {
+    question: "How long does an automation take to build?",
+    answer: "Most production automation systems go live within 2 to 4 weeks, depending on the complexity of your stack and workflow edge cases.",
+  },
+  {
+    question: "How much does an automation cost?",
+    answer: "Pricing is transparent and project-based depending on scope, integrations, and agent complexity. Every project begins with a Free Automation Audit where we detail expected ROI before any financial commitment.",
+  },
+  {
+    question: "Is my business data secure?",
+    answer: "100%. We enforce strict credential encryption, role-based API permissions, self-hosted deployment options, and zero data retention models for AI processing.",
+  },
+  {
+    question: "Who owns the workflows?",
+    answer: "You do. 100% of the workflow blueprints, code, credentials, and infrastructure configurations belong entirely to your company upon project completion.",
+  },
+  {
+    question: "Can Blukaze maintain the system after launch?",
+    answer: "Yes. We offer ongoing monitoring, error alerts, API maintenance, and feature iterations to guarantee your systems remain 99.99% reliable as your business scales.",
+  },
+  {
+    question: "What happens if an AI model fails?",
+    answer: "We engineer all systems with production safeguards: automatic retries, fallback logic, structured Zod validation, and human-in-the-loop escalation paths whenever unexpected outputs occur.",
   },
 ];
 
@@ -38,17 +57,20 @@ const FAQSection = () => {
   const { ref, isRevealed } = useScrollReveal(0.1);
 
   return (
-    <section className="py-28 px-6 relative">
-
+    <section id="faq" className="py-24 md:py-36 px-6 relative bg-[#030308] border-b border-white/5">
       <div className="max-w-6xl mx-auto relative z-10" ref={ref}>
         <div className={`flex flex-col lg:flex-row gap-12 lg:gap-20 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
           {/* Left: Heading */}
           <div className="lg:w-1/3 shrink-0">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight">
-              Frequently asked
-              <br />
-              questions.
+            <span className="text-xs font-black uppercase tracking-[0.3em] text-blue-400 mb-4 block">
+              Clear Answers
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-tight text-white mb-4">
+              Frequently asked questions.
             </h2>
+            <p className="text-sm text-white/50">
+              Everything you need to know about partnering with Blukaze.
+            </p>
           </div>
 
           {/* Right: Accordion */}
@@ -58,12 +80,12 @@ const FAQSection = () => {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="border-b border-border/30 rounded-none px-0 bg-transparent"
+                  className="border-b border-white/10 rounded-none px-0 bg-transparent"
                 >
-                  <AccordionTrigger className="text-left text-base font-medium hover:no-underline hover:text-primary transition-colors py-6">
+                  <AccordionTrigger className="text-left text-base font-bold text-white hover:no-underline hover:text-blue-400 transition-colors py-6">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-6">
+                  <AccordionContent className="text-white/60 text-sm leading-relaxed pb-6">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

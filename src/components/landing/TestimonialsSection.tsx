@@ -46,9 +46,11 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
         <div className={`scroll-reveal ${isRevealed ? "revealed" : ""}`}>
           <div className="text-center mb-16">
-
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
-              What our clients say
+            <span className="text-xs font-black uppercase tracking-[0.3em] text-blue-400 mb-4 block">
+              Verified Client Outcomes
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">
+              Trusted by Operations Leaders
             </h2>
           </div>
 

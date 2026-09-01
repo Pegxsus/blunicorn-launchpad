@@ -51,23 +51,21 @@ const DashboardSection = () => {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.h2 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold font-heading mb-6"
           >
-            Your Personal <span className="magic-text">Launchpad</span>
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-lg text-muted-foreground"
-          >
-            Experience complete transparency and seamless collaboration through our proprietary client dashboard. Everything you need, right at your fingertips.
-          </motion.p>
+            <span className="text-xs font-black uppercase tracking-[0.3em] text-blue-400 mb-4 block">
+              Client Experience
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black mb-6 text-white tracking-tight">
+              What working with Blukaze looks like.
+            </h2>
+            <p className="text-base text-white/60 max-w-xl mx-auto">
+              Experience complete transparency through your Personal Launchpad — track deliverables, discuss feedback, view timelines, and manage invoices in one centralized dashboard.
+            </p>
+          </motion.div>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-center lg:items-start">
