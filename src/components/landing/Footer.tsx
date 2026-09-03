@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import logo from "@/assets/logo.png";
+import BlukazeBrand from "@/components/BlukazeBrand";
 
 const footerLinks = {
   Solutions: [
@@ -102,10 +103,10 @@ const Footer = ({ showCTA = true }: { showCTA?: boolean }) => {
           {/* Brand */}
           <div className="col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-8">
-              <div className="w-14 h-14 flex items-center justify-center">
+              <div className="w-12 h-12 flex items-center justify-center">
                 <img src={logo} alt="Blukaze" className="w-full h-full object-contain brightness-0 invert" />
               </div>
-              <span className="text-2xl font-semibold text-white">Blukaze</span>
+              <BlukazeBrand className="h-7 w-auto text-white" />
             </Link>
             <p className="text-sm text-white/30 leading-relaxed max-w-xs mb-8">
               Automation with a human touch.

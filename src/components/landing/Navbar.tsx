@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.png";
 import BookCallDialog from "./BookCallDialog";
+import BlukazeBrand from "@/components/BlukazeBrand";
 
 const navLinks = [
   { name: "Solutions", href: "#solutions" },
@@ -54,10 +55,10 @@ const Navbar = () => {
         <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between w-full transition-all duration-700">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group relative z-50">
-            <div className="w-10 h-10 flex items-center justify-center">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center">
               <img src={logo} alt="Blukaze" className="w-full h-full object-contain brightness-0 invert" />
             </div>
-            <span className="text-2xl font-semibold tracking-tight text-white">Blukaze</span>
+            <BlukazeBrand className="h-5 sm:h-6 w-auto text-white" />
           </Link>
 
           {/* Desktop Links */}
@@ -106,7 +107,7 @@ const Navbar = () => {
             className="fixed inset-0 z-50 bg-[#050510] flex flex-col p-8 overflow-y-auto"
           >
             <div className="flex items-center justify-between mb-12">
-              <span className="text-2xl font-semibold text-white">Blukaze</span>
+              <BlukazeBrand className="h-7 w-auto text-white" />
               <button onClick={() => setIsOpen(false)} className="text-white p-2"><X size={28} /></button>
             </div>
             <div className="flex flex-col gap-6">
