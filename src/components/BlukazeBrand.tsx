@@ -12,7 +12,7 @@ export const BlukazeBrand: React.FC<BlukazeBrandProps> = ({
 }) => {
   return (
     <svg
-      viewBox="0 0 240 40"
+      viewBox="0 0 234 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -26,31 +26,31 @@ export const BlukazeBrand: React.FC<BlukazeBrandProps> = ({
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        {/* B (X: 6 to 28) - Uniform height Y: 6 to 34 */}
+        {/* B (X: 6 to 26) - Height Y: 6 to 34 */}
         <path d="M 6 6 V 34" />
-        <path d="M 6 6 H 20 C 26 6 26 20 20 20 H 6" />
-        <path d="M 6 20 H 21 C 27.5 20 27.5 34 21 34 H 6" />
+        <path d="M 6 6 H 16 A 7 7 0 0 1 16 20 H 6" />
+        <path d="M 6 20 H 16 A 7 7 0 0 1 16 34 H 6" />
 
-        {/* L (X: 40 to 58) - Uniform height Y: 6 to 34 */}
-        <path d="M 40 6 V 34 H 58" />
+        {/* L (X: 38 to 56) - Height Y: 6 to 34 */}
+        <path d="M 38 6 V 34 H 56" />
 
-        {/* U (X: 70 to 92) - Uniform height Y: 6 to 34 */}
-        <path d="M 70 6 V 23 C 70 34 92 34 92 23 V 6" />
+        {/* U (X: 68 to 90) - Perfectly Symmetrical Arc Height Y: 6 to 34 */}
+        <path d="M 68 6 V 23 A 11 11 0 0 0 90 23 V 6" />
 
-        {/* K (X: 104 to 126) - Uniform height Y: 6 to 34 */}
-        <path d="M 104 6 V 34" />
-        <path d="M 126 6 L 105 20 L 126 34" />
+        {/* K (X: 102 to 124) - Height Y: 6 to 34 */}
+        <path d="M 102 6 V 34" />
+        <path d="M 124 6 L 102 20 L 124 34" />
 
-        {/* A (X: 138 to 160) - Uniform height Y: 6 to 34 */}
-        <path d="M 138 34 L 149 6 L 160 34" />
+        {/* A (X: 136 to 158) - Height Y: 6 to 34 */}
+        <path d="M 136 34 L 147 6 L 158 34" />
 
-        {/* Z (X: 172 to 194) - Uniform height Y: 6 to 34 */}
-        <path d="M 172 6 H 194 L 172 34 H 194" />
+        {/* Z (X: 170 to 192) - Height Y: 6 to 34 */}
+        <path d="M 170 6 H 192 L 170 34 H 192" />
 
-        {/* E (X: 206 to 228) - Uniform height Y: 6 to 34 */}
-        <path d="M 206 6 H 228" />
-        <path d="M 206 20 H 228" />
-        <path d="M 206 34 H 228" />
+        {/* E (X: 204 to 226) - Height Y: 6 to 34 */}
+        <path d="M 204 6 H 226" />
+        <path d="M 204 20 H 226" />
+        <path d="M 204 34 H 226" />
       </g>
     </svg>
   );
