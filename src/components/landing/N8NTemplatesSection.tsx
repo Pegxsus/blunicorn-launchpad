@@ -114,7 +114,7 @@ const N8NTemplatesSection = () => {
           <div className="text-center">
             <a href="https://n8n.io/creators/hellopaul/" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg" className="group rounded-full px-8 bg-white/5 border-white/10 hover:bg-white/10 text-white font-semibold text-xs">
-                Browse All 20+ Production Templates
+                Browse All 14+ Production Workflows
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
