@@ -13,7 +13,7 @@ const footerLinks = {
     { label: "Business Audit", href: "/services/business-audit" },
   ],
   Resource: [
-    { label: "Blog", href: "#" },
+    { label: "Blog", href: "/blog" },
   ],
   Company: [
     { label: "About Us", href: "/about" },

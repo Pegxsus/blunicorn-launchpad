@@ -19,6 +19,8 @@ const Works = lazy(() => import("./pages/Works"));
 const WorkDetail = lazy(() => import("./pages/WorkDetail"));
 const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
 const PostCheckout = lazy(() => import("./pages/PostCheckout"));
+const Blog = lazy(() => import("./pages/Blog"));
+const ArticleDetail = lazy(() => import("./pages/ArticleDetail"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient({
@@ -48,6 +50,8 @@ const App = () => (
             <Route path="/works" element={<Works />} />
             <Route path="/works/:slug" element={<WorkDetail />} />
             <Route path="/services/:slug" element={<ServiceDetail />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<ArticleDetail />} />
             <Route path="/post-checkout" element={<PostCheckout />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

@@ -12,6 +12,7 @@ const navLinks = [
   { name: "Industries", href: "#what-we-automate" },
   { name: "Case Studies", href: "/works", isPage: true },
   { name: "Templates", href: "#templates" },
+  { name: "Blog", href: "/blog", isPage: true },
   { name: "About", href: "/about", isPage: true },
 ];
 
