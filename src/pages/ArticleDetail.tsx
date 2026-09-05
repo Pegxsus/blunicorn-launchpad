@@ -135,9 +135,6 @@ export const ArticleDetail = () => {
                 secondaryButtonText={article.finalCTA.secondaryButtonText}
               />
 
-              {/* Author Profile */}
-              <AuthorCard author={article.author} />
-
               {/* Related Articles Discovery */}
               <RelatedArticles currentSlug={article.slug} relatedSlugs={article.relatedSlugs} />
 

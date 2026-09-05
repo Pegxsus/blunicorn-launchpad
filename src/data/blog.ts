@@ -47,7 +47,7 @@ export interface BlogArticle {
   };
   sections: ArticleSection[];
   inArticleCTA: {
-    triggerIndex: number; // Section index to insert CTA after
+    triggerIndex: number;
     headline: string;
     subtext: string;
     buttonText: string;
@@ -78,6 +78,131 @@ export const authors: Record<string, Author> = {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "we-dont-need-more-ai-assistants-we-need-ai-that-actually-does-the-work",
+    slug: "we-dont-need-more-ai-assistants-we-need-ai-that-actually-does-the-work",
+    category: "AI AGENTS",
+    title: "We Don't Need More AI Assistants. We Need AI That Actually Does the Work.",
+    subtitle: "What Hermes Agent tells us about the next generation of AI—and why the future of automation isn't another chat window.",
+    publishedAt: "September 5, 2026",
+    updatedAt: "September 5, 2026",
+    readTime: "8 min read",
+    author: authors.paul,
+    heroVisual: {
+      type: "architecture",
+      caption: "Figure 1.1 — Architectural comparison between conversational AI chatbots (left) versus background autonomous execution engines (right).",
+    },
+    sections: [
+      {
+        id: "the-illusion-of-chat-productivity",
+        number: "01",
+        title: "The illusion of chat-based productivity",
+        content: [
+          "For the past three years, the tech industry has been obsessed with conversational interfaces. Every software company added a chat drawer. Every enterprise launched an internal AI copilot. Every task now begins with a blinking text cursor.",
+          "Yet if you look closely at team workflows inside modern businesses, the productivity revolution has plateaued. Why? Because a chat window is still a manual bottleneck.",
+          "To use a chatbot, a human must open a browser tab, type a prompt, copy the generated text, reformat the output, open another application, and paste the result into a database or CRM. You haven't automated the work—you've merely hired an eager intern who requires constant, line-by-line supervision.",
+          "We don't need faster typing assistants. We need AI that operates tools, connects infrastructure, and executes complete end-to-end workflows in the background.",
+        ],
+      },
+      {
+        id: "conversational-ai-vs-autonomous-execution",
+        number: "02",
+        title: "Conversational AI vs. Autonomous Execution",
+        content: [
+          "The fundamental mistake companies make is treating Large Language Models as conversational novelty bots rather than reasoning engines for API execution.",
+          "Consider a standard operational scenario: A enterprise client emails a request to update their billing details and add three new team seats. A chat assistant requires an operations manager to copy the email, ask the bot to parse the names, read the reply, and manually execute the changes in Stripe and HubSpot.",
+          "An **Autonomous Execution Agent**, by contrast, listens to the inbound email webhook, parses the request, verifies account permissions, calls the Stripe billing API, updates HubSpot CRM records, and posts a confirmation summary in Slack—all within 4 seconds, without a single human click.",
+        ],
+        stat: {
+          value: "92%",
+          label: "Reduction in operational context switches",
+          description: "Achieved when moving from manual chat-based AI prompts to event-driven background execution agents.",
+        },
+      },
+      {
+        id: "what-hermes-agent-teaches-us",
+        number: "03",
+        title: "What Hermes Agent teaches us about next-gen AI",
+        content: [
+          "The recent open-weight release of **Hermes Agent** (developed by Nous Research) represents a major turning point in open AI architecture.",
+          "Unlike standard chat models optimized for polite conversation, Hermes Agent is explicitly fine-tuned for autonomous tool use, multi-step environment interaction, and self-reflection loops.",
+          "When given a goal, Hermes does not simply answer with text. It executes shell commands, inspects error outputs, adjusts its internal plan, and loops until the task is completely solved. It possesses *agency*—the ability to act upon its environment.",
+        ],
+        callout: {
+          type: "insight",
+          title: "The Paradigm Shift in Agent Architecture",
+          text: "The future belongs to open-weight, execution-focused models that operate inside persistent runtime environments rather than proprietary walled-garden chat windows.",
+        },
+      },
+      {
+        id: "comparing-chatbots-to-execution-engines",
+        number: "04",
+        title: "Comparing Chatbots to Execution Engines",
+        content: [
+          "Here is how traditional chat-based copilots compare against background execution agents built on deterministic workflow platforms like n8n:",
+        ],
+        table: {
+          headers: ["Dimension", "Conversational AI Chatbot", "Autonomous Execution Agent"],
+          rows: [
+            ["Interface", "Manual Chat Window / Browser Tab", "Headless Event Webhook / Background API"],
+            ["Human Effort", "100% Babysitting & Copy-Pasting", "Zero-Touch (Exception-Only Review)"],
+            ["Execution Velocity", "10–15 minutes per task", "< 4 seconds background resolution"],
+            ["Tool Interaction", "Read-only text advice", "Direct API, DB & Webhook read/write"],
+            ["Reliability", "Unpredictable text formatting", "Strict Schema Validation & Fallback Rules"],
+            ["Scalability", "Limited by human typing speed", "Infinite concurrent background execution"],
+          ],
+        },
+      },
+      {
+        id: "headless-ai-and-background-orchestration",
+        number: "05",
+        title: "Headless AI & Background Orchestration",
+        content: [
+          "The most powerful AI systems of the next decade will be invisible. They won't have a chat interface or a floating widget in the bottom right corner of your screen.",
+          "Instead, they will operate as 'Headless Micro-Agents' orchestrated inside workflow platforms like n8n, Supabase, and custom microservices. They will listen to webhooks, process unstructured invoices, verify compliance rules, and interact directly with legacy databases.",
+          "When human intervention is required, the agent won't ask you to chat—it will present a clean approval card in Slack or your dashboard with a single 'Approve' or 'Reject' button.",
+        ],
+        quote: "The best user interface for an AI agent is no user interface at all. The work simply gets done.",
+      },
+      {
+        id: "building-execution-first-systems-at-blukaze",
+        number: "06",
+        title: "Building execution-first systems at Blukaze",
+        content: [
+          "At Blukaze, we don't build chat wrappers. We engineer background execution architecture that turns manual company processes into automated software pipelines.",
+          "Our engineering methodology wraps non-deterministic LLMs and agent models inside three deterministic safeguards:",
+          "1. **Strict Pydantic / Zod Schema Validation**: Ensuring AI outputs match exact JSON structures before touching production APIs.",
+          "2. **Stateful Fallback Workflows**: Routing failed queries to human review queues rather than hallucinating broken database writes.",
+          "3. **Event-Driven Orchestration**: Connecting n8n, custom Python microservices, vector databases (RAG), and API endpoints into resilient loops.",
+        ],
+      },
+      {
+        id: "the-future-of-work-isnt-chatting",
+        number: "07",
+        title: "The future of work isn't chatting",
+        content: [
+          "We are moving past the era of novelty chatbots. The companies that gain an unfair advantage in the next five years will be those that automate their operational backbone.",
+          "Stop giving your team another chat tool to monitor. Start building the hands for your AI agents.",
+        ],
+      },
+    ],
+    inArticleCTA: {
+      triggerIndex: 3,
+      headline: "Want AI agents that actually execute tasks in your tools?",
+      subtext: "We design and deploy production-ready agentic workflows connected directly to your CRM, APIs, and databases.",
+      buttonText: "Discuss Agent Architecture",
+    },
+    finalCTA: {
+      headline: "Stop chatting with AI. Start automating your work.",
+      subtext: "Tell Blukaze what your team does manually every day, and we'll engineer the background execution system to handle it.",
+      primaryButtonText: "Find What You Can Automate",
+      secondaryButtonText: "Explore Agent Systems",
+    },
+    relatedSlugs: [
+      "your-employees-arent-slow-your-processes-are",
+      "why-n8n-is-replacing-legacy-integration-platforms",
+    ],
+  },
+  {
     id: "your-employees-arent-slow-your-processes-are",
     slug: "your-employees-arent-slow-your-processes-are",
     category: "BUSINESS AUTOMATION",
@@ -89,7 +214,7 @@ export const blogArticles: BlogArticle[] = [
     author: authors.paul,
     heroVisual: {
       type: "workflow",
-      caption: "Figure 1.1 — Abstract model of a manual multi-step lead & operations pipeline versus an automated event-driven workflow engine.",
+      caption: "Figure 2.1 — Abstract model of a manual multi-step lead & operations pipeline versus an automated event-driven workflow engine.",
     },
     sections: [
       {
@@ -211,8 +336,8 @@ export const blogArticles: BlogArticle[] = [
       secondaryButtonText: "Explore Case Studies",
     },
     relatedSlugs: [
+      "we-dont-need-more-ai-assistants-we-need-ai-that-actually-does-the-work",
       "why-n8n-is-replacing-legacy-integration-platforms",
-      "building-production-ai-agents-beyond-rag",
     ],
   },
   {
@@ -226,7 +351,7 @@ export const blogArticles: BlogArticle[] = [
     author: authors.engineering,
     heroVisual: {
       type: "architecture",
-      caption: "Figure 2.1 — Self-hosted n8n instance orchestrated with Docker, PostgreSQL, and custom Python/Node execution nodes.",
+      caption: "Figure 3.1 — Self-hosted n8n instance orchestrated with Docker, PostgreSQL, and custom Python/Node execution nodes.",
     },
     sections: [
       {
@@ -252,49 +377,8 @@ export const blogArticles: BlogArticle[] = [
       secondaryButtonText: "View n8n Templates",
     },
     relatedSlugs: [
+      "we-dont-need-more-ai-assistants-we-need-ai-that-actually-does-the-work",
       "your-employees-arent-slow-your-processes-are",
-      "building-production-ai-agents-beyond-rag",
-    ],
-  },
-  {
-    id: "building-production-ai-agents-beyond-rag",
-    slug: "building-production-ai-agents-beyond-rag",
-    category: "AI AGENTS",
-    title: "Building Production AI Agents: Beyond RAG & Prompt Engineering",
-    subtitle: "Why vector search alone fails in production—and how structured tool-calling, evaluation suites, and stateful memory build reliable AI systems.",
-    publishedAt: "August 18, 2026",
-    readTime: "8 min read",
-    author: authors.paul,
-    heroVisual: {
-      type: "diagram",
-      caption: "Figure 3.1 — Multi-agent loop architecture with tool calling, schema validation, and fallback state management.",
-    },
-    sections: [
-      {
-        id: "the-rag-hallucination-trap",
-        number: "01",
-        title: "The RAG hallucination trap",
-        content: [
-          "Naive RAG (naive vector search + prompt context) works well in demos. But in production enterprise environments, standard RAG fails when queries require multi-step reasoning, dynamic filtering, or precise tabular data retrieval.",
-          "To build AI agents that operations teams actually trust, you need deterministic state machines surrounding non-deterministic LLMs.",
-        ],
-      },
-    ],
-    inArticleCTA: {
-      triggerIndex: 0,
-      headline: "Need production-grade AI agents for your business?",
-      subtext: "We architect reliable AI agents with MCP integration and strict schema verification.",
-      buttonText: "Discuss Agent Architecture",
-    },
-    finalCTA: {
-      headline: "Transform your operations with production AI agents.",
-      subtext: "Book a technical discovery session with Blukaze to explore agent opportunities.",
-      primaryButtonText: "Get Free AI Audit",
-      secondaryButtonText: "Explore Work Systems",
-    },
-    relatedSlugs: [
-      "your-employees-arent-slow-your-processes-are",
-      "why-n8n-is-replacing-legacy-integration-platforms",
     ],
   },
 ];
