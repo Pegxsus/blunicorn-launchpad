@@ -19,20 +19,10 @@ export const ArticleMeta = ({ article }: ArticleMetaProps) => {
 
   return (
     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 py-6 border-y border-white/10 my-8 text-xs font-medium text-white/60">
-      {/* Author Profile */}
-      <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/20 p-0.5 flex items-center justify-center overflow-hidden">
-          <img
-            src={article.author.avatar}
-            alt={article.author.name}
-            className="w-full h-full object-contain rounded-full brightness-0 invert"
-          />
-        </div>
-        <div>
-          <p className="text-sm font-bold text-white tracking-tight">{article.author.name}</p>
-          <p className="text-xs text-white/40">{article.author.role}</p>
-        </div>
-      </div>
+      {/* Author Name */}
+      <p className="text-xs sm:text-sm font-medium text-white/70">
+        By <span className="font-bold text-white">{article.author.name}</span>
+      </p>
 
       {/* Date, Read time, Share buttons */}
       <div className="flex items-center gap-6 text-white/50 w-full sm:w-auto justify-between sm:justify-start">
